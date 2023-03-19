@@ -12,6 +12,9 @@ Created on Fri Mar 17 15:45:36 2023
 
 # Use model = gpt-3.5-turbo
 
+# pip install torch
+# pip install transformers
+
 
 import os
 import openai
@@ -23,7 +26,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # WhisperAI
 # Note: you need to be using OpenAI Python v0.27.0 for the code below to work
 # os.getcwd()
-audio_file= open("openai/JV_AUDIO_EXAMPLE.wav", "rb")
+audio_file= open("JV_AUDIO_EXAMPLE.wav", "rb")
 transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
 # transcript
@@ -33,6 +36,19 @@ transcription = transcript.text
 
 # Clean String for Topic Summarization
 # https://towardsdatascience.com/text-cleaning-for-nlp-in-python-2716be301d5d
+
+
+# Size of Input Text in Tokens
+# https://blog.devgenius.io/supplemental-developers-guide-to-openai-gpt-3-api-c20715005dda
+import torch
+from transformers import AutoTokenizer
+
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+# text = """The OpenAI API can be applied to virtually any task that involves understanding or generating natural language or code. We offer a spectrum of models with different levels of power suitable for different tasks, as well as the ability to fine-tune your own custom models. These models can be used for everything from content generation to semantic search and classification."""
+
+input_ids = torch.tensor(tokenizer.encode(transcription)).unsqueeze(0)
+num_tokens = input_ids.shape[1]
+print(f'Input Tokens: {num_tokens}')
 
 
 # What is my conversation about?
