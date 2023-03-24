@@ -1,0 +1,1 @@
+ Hi, my name is Jared Vidolewski. I am in class D-A-M-G, 7245, and I am testing out Whisper API and OpenAI from Chat GPT.

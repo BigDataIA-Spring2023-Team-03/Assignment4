@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 from typing import Tuple
 import boto3
 from botocore.client import Config
+import json
 
 
 
@@ -20,6 +21,7 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     aws_secret_access_key = os.getenv("AWS_SECRET_ACCESS_KEY")
     s3_bucket_name = os.getenv("S3_BUCKET_NAME")
     whisper_api_key = os.getenv("WHISPER_API_KEY")
+    s3_bucket_folder = os.getenv("FOLDER_NAME")
   
     
 
@@ -62,7 +64,7 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     "diarization": "false",
     #Note: setting this to be true will slow down results.
     #Fewer file types will be accepted when diarization=true
-    "numSpeakers": "1",
+    "numSpeakers": "2",
     #if using diarization, you can inform the model how many speakers you have
     #if no value set, the model figures out numSpeakers automatically!
     "url": mp3_url, #can't have both a url and file sent!
@@ -71,7 +73,19 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     #translate will translate speech from language to english
     }
     response = requests.post(url, headers=headers, data=data)
-    print(response.text)
+    print("\n",type(response.text))
+    print("\n")
+    # Convert response to JSON object and extract text attribute
+    response_json = json.loads(response.text)
+    text = response_json['text']
+    file_upload_name = mp3_file_key[:-4] + ".txt"
+    with open('my_file.txt', 'w') as f:
+        f.write(text)
+
+    # Upload text data to S3 bucket
+    s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+    s3.put_object(Body=text, Bucket=s3_bucket_name, Key=s3_bucket_folder+ file_upload_name)
+    
 
     return response.text
 
