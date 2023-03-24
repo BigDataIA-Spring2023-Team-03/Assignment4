@@ -1,3 +1,6 @@
+#Author: Raj Mehta
+#Description: Back end code for Audio Transcription using Whisper Api (https://whisperapi.com/)
+
 import boto3
 import io
 import os
