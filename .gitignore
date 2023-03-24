@@ -1,4 +1,10 @@
 .env
+airflow/.env
 
 # venv
 openai_venv
+
+# jv
+Notes.txt
+jv_scrap.py
+

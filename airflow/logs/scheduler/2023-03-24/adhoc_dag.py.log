@@ -1,0 +1,918 @@
+[2023-03-24T14:34:59.138+0000] {processor.py:153} INFO - Started process (PID=67) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:34:59.139+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:34:59.139+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:34:59.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:34:59.143+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:34:59.142+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:34:59.143+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:34:59.170+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.034 seconds
+[2023-03-24T14:35:29.980+0000] {processor.py:153} INFO - Started process (PID=108) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:35:29.981+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:35:29.982+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:35:29.981+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:35:29.984+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:35:29.983+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:35:29.984+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:35:30.002+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.024 seconds
+[2023-03-24T14:36:00.908+0000] {processor.py:153} INFO - Started process (PID=158) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:00.909+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:36:00.911+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:36:00.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:00.915+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:36:00.913+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:36:00.915+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:00.946+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.042 seconds
+[2023-03-24T14:36:31.832+0000] {processor.py:153} INFO - Started process (PID=210) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:31.842+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:36:31.843+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:36:31.843+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:31.845+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:36:31.844+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:36:31.845+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:36:31.864+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.034 seconds
+[2023-03-24T14:39:55.056+0000] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:39:55.057+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:39:55.058+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:39:55.058+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:39:55.064+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:39:55.061+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:39:55.064+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:39:55.092+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.040 seconds
+[2023-03-24T14:40:25.909+0000] {processor.py:153} INFO - Started process (PID=107) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:25.910+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:40:25.911+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:40:25.911+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:25.914+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:40:25.913+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:40:25.914+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:26.123+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.216 seconds
+[2023-03-24T14:40:56.762+0000] {processor.py:153} INFO - Started process (PID=168) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:56.762+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:40:56.763+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:40:56.763+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:56.765+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:40:56.764+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:40:56.765+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:40:56.785+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.026 seconds
+[2023-03-24T14:41:27.578+0000] {processor.py:153} INFO - Started process (PID=209) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:27.578+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:41:27.579+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:41:27.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:27.581+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:41:27.581+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:41:27.582+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:27.608+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.033 seconds
+[2023-03-24T14:41:58.467+0000] {processor.py:153} INFO - Started process (PID=271) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:58.477+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:41:58.478+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:41:58.478+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:58.480+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:41:58.479+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:41:58.480+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:41:58.500+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.037 seconds
+[2023-03-24T14:42:29.339+0000] {processor.py:153} INFO - Started process (PID=321) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:42:29.340+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:42:29.340+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:42:29.340+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:42:29.342+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:42:29.342+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:42:29.343+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:42:29.370+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.034 seconds
+[2023-03-24T14:43:00.207+0000] {processor.py:153} INFO - Started process (PID=373) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:00.208+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:43:00.209+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:43:00.208+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:00.210+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:43:00.210+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:43:00.211+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:00.231+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.026 seconds
+[2023-03-24T14:43:31.137+0000] {processor.py:153} INFO - Started process (PID=420) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:31.138+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:43:31.139+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:43:31.139+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:31.144+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:43:31.143+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:43:31.145+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:43:31.193+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.063 seconds
+[2023-03-24T14:44:02.033+0000] {processor.py:153} INFO - Started process (PID=475) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:44:02.035+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:44:02.035+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:44:02.035+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:44:02.037+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:44:02.037+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:44:02.038+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:44:02.060+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.030 seconds
+[2023-03-24T14:45:14.266+0000] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:14.269+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:45:14.271+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:45:14.270+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:14.277+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:45:14.274+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:45:14.277+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:14.316+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.056 seconds
+[2023-03-24T14:45:45.225+0000] {processor.py:153} INFO - Started process (PID=107) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:45.226+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:45:45.226+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:45:45.226+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:45.229+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:45:45.228+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:45:45.229+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:45:45.258+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.036 seconds
+[2023-03-24T14:46:16.108+0000] {processor.py:153} INFO - Started process (PID=168) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:16.110+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:46:16.111+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:46:16.111+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:16.117+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:46:16.115+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:46:16.118+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:16.157+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.057 seconds
+[2023-03-24T14:46:46.945+0000] {processor.py:153} INFO - Started process (PID=209) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:46.945+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:46:46.946+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:46:46.946+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:46.948+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:46:46.947+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:46:46.949+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:46:46.971+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.029 seconds
+[2023-03-24T14:49:33.220+0000] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:49:33.222+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:49:33.226+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:49:33.225+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:49:33.235+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:49:33.232+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:49:33.236+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:49:33.285+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.069 seconds
+[2023-03-24T14:50:04.178+0000] {processor.py:153} INFO - Started process (PID=116) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:04.180+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:50:04.182+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:50:04.181+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:04.190+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:50:04.188+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:50:04.191+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:04.238+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.067 seconds
+[2023-03-24T14:50:35.001+0000] {processor.py:153} INFO - Started process (PID=168) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:35.003+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:50:35.003+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:50:35.003+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:35.005+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:50:35.004+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:50:35.005+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:50:35.024+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.025 seconds
+[2023-03-24T14:51:05.816+0000] {processor.py:153} INFO - Started process (PID=208) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:05.817+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:51:05.817+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:51:05.817+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:05.820+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:51:05.819+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:51:05.820+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:06.077+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.265 seconds
+[2023-03-24T14:51:36.880+0000] {processor.py:153} INFO - Started process (PID=269) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:36.881+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:51:36.882+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:51:36.882+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:36.884+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:51:36.884+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:51:36.885+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:51:36.911+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.034 seconds
+[2023-03-24T14:52:07.636+0000] {processor.py:153} INFO - Started process (PID=310) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:52:07.637+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:52:07.637+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:52:07.637+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:52:07.639+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:52:07.639+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 3, in <module>
+    from decouple import config, AutoConfig
+ModuleNotFoundError: No module named 'decouple'
+[2023-03-24T14:52:07.640+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:52:07.660+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.026 seconds
+[2023-03-24T14:53:28.030+0000] {processor.py:153} INFO - Started process (PID=67) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:28.032+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:53:28.034+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:53:28.033+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:28.681+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:53:28.679+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 10, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
+[2023-03-24T14:53:28.681+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:28.712+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.686 seconds
+[2023-03-24T14:53:58.896+0000] {processor.py:153} INFO - Started process (PID=117) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:58.897+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:53:58.898+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:53:58.898+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:59.135+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:53:59.133+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 10, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
+[2023-03-24T14:53:59.135+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:53:59.178+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.287 seconds
+[2023-03-24T14:54:29.734+0000] {processor.py:153} INFO - Started process (PID=169) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:54:29.751+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:54:29.752+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:54:29.751+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:54:29.822+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:54:29.822+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 10, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
+[2023-03-24T14:54:29.823+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:54:29.844+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.112 seconds
+[2023-03-24T14:55:00.734+0000] {processor.py:153} INFO - Started process (PID=210) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:55:00.735+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:55:00.735+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:55:00.735+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:55:00.815+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:55:00.815+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 10, in <module>
+    import openai
+ModuleNotFoundError: No module named 'openai'
+[2023-03-24T14:55:00.816+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:55:01.014+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.282 seconds
+[2023-03-24T14:57:31.616+0000] {processor.py:153} INFO - Started process (PID=77) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:57:31.624+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:57:31.626+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:57:31.625+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:57:35.136+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:57:35.125+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T14:57:35.141+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:57:35.220+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 3.616 seconds
+[2023-03-24T14:58:05.482+0000] {processor.py:153} INFO - Started process (PID=130) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:05.484+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:58:05.485+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:58:05.485+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:05.723+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:58:05.721+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T14:58:05.723+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:05.742+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.265 seconds
+[2023-03-24T14:58:36.263+0000] {processor.py:153} INFO - Started process (PID=172) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:36.264+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:58:36.265+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:58:36.264+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:36.569+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:58:36.567+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T14:58:36.569+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:58:36.593+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.332 seconds
+[2023-03-24T14:59:07.382+0000] {processor.py:153} INFO - Started process (PID=234) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:59:07.383+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T14:59:07.384+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:59:07.384+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:59:07.747+0000] {logging_mixin.py:137} INFO - [2023-03-24T14:59:07.745+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T14:59:07.748+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T14:59:07.770+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.391 seconds
+[2023-03-24T15:01:07.811+0000] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:07.813+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:01:07.814+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:01:07.814+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:08.273+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:01:08.271+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:01:08.273+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:08.300+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.496 seconds
+[2023-03-24T15:01:38.673+0000] {processor.py:153} INFO - Started process (PID=116) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:38.675+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:01:38.676+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:01:38.676+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:39.189+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:01:39.186+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:01:39.190+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:01:39.234+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.568 seconds
+[2023-03-24T15:02:10.099+0000] {processor.py:153} INFO - Started process (PID=169) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:10.111+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:02:10.112+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:02:10.111+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:10.343+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:02:10.341+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:02:10.344+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:10.554+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.456 seconds
+[2023-03-24T15:02:40.937+0000] {processor.py:153} INFO - Started process (PID=211) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:40.939+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:02:40.940+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:02:40.939+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:41.283+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:02:41.280+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:02:41.283+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:02:41.312+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.381 seconds
+[2023-03-24T15:03:12.402+0000] {processor.py:153} INFO - Started process (PID=274) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:12.403+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:03:12.404+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:03:12.403+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:12.621+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:03:12.619+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:03:12.621+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:12.638+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.239 seconds
+[2023-03-24T15:03:43.214+0000] {processor.py:153} INFO - Started process (PID=336) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:43.216+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:03:43.217+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:03:43.216+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:43.822+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:03:43.819+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:03:43.822+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:03:43.850+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.642 seconds
+[2023-03-24T15:04:14.403+0000] {processor.py:153} INFO - Started process (PID=378) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:14.404+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:04:14.405+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:04:14.404+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:14.643+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:04:14.641+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:04:14.644+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:14.661+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.262 seconds
+[2023-03-24T15:04:45.358+0000] {processor.py:153} INFO - Started process (PID=440) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:45.359+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:04:45.359+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:04:45.359+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:45.826+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:04:45.823+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:04:45.826+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:04:45.866+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.513 seconds
+[2023-03-24T15:05:16.033+0000] {processor.py:153} INFO - Started process (PID=482) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:16.035+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:05:16.035+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:05:16.035+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:16.250+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:05:16.248+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:05:16.250+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:16.270+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.241 seconds
+[2023-03-24T15:05:46.807+0000] {processor.py:153} INFO - Started process (PID=543) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:46.808+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:05:46.809+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:05:46.809+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:47.129+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:05:47.127+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:05:47.129+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:05:47.149+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.346 seconds
+[2023-03-24T15:06:18.134+0000] {processor.py:153} INFO - Started process (PID=585) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:18.136+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:06:18.137+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:06:18.136+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:18.384+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:06:18.381+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:06:18.384+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:18.419+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.288 seconds
+[2023-03-24T15:06:48.924+0000] {processor.py:153} INFO - Started process (PID=647) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:48.925+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:06:48.926+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:06:48.926+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:49.159+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:06:49.157+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:06:49.159+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:06:49.179+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.259 seconds
+[2023-03-24T15:07:19.926+0000] {processor.py:153} INFO - Started process (PID=689) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:19.929+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:07:19.930+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:07:19.929+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:20.306+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:07:20.300+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:07:20.306+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:20.346+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.425 seconds
+[2023-03-24T15:07:50.796+0000] {processor.py:153} INFO - Started process (PID=751) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:50.796+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:07:50.797+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:07:50.796+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:51.037+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:07:51.035+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:07:51.037+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:07:51.054+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.260 seconds
+[2023-03-24T15:08:21.702+0000] {processor.py:153} INFO - Started process (PID=793) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:21.704+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:08:21.704+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:08:21.704+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:21.931+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:08:21.930+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:08:21.932+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:21.957+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.257 seconds
+[2023-03-24T15:08:52.720+0000] {processor.py:153} INFO - Started process (PID=854) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:52.721+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:08:52.721+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:08:52.721+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:52.946+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:08:52.944+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:08:52.946+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:08:52.964+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.248 seconds
+[2023-03-24T15:10:40.799+0000] {processor.py:153} INFO - Started process (PID=66) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:10:40.801+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:10:40.803+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:10:40.802+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:10:41.295+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:10:41.294+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:10:41.296+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:10:41.325+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.534 seconds
+[2023-03-24T15:11:11.672+0000] {processor.py:153} INFO - Started process (PID=108) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:11.672+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:11:11.673+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:11:11.673+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:11.923+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:11:11.922+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:11:11.924+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:11.953+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.284 seconds
+[2023-03-24T15:11:42.029+0000] {processor.py:153} INFO - Started process (PID=170) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:42.040+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:11:42.040+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:11:42.040+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:42.256+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:11:42.253+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:11:42.256+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:11:42.274+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.248 seconds
+[2023-03-24T15:12:12.873+0000] {processor.py:153} INFO - Started process (PID=212) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:12.873+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:12:12.874+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:12:12.874+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:13.087+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:12:13.085+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:12:13.087+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:13.114+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.244 seconds
+[2023-03-24T15:12:43.887+0000] {processor.py:153} INFO - Started process (PID=274) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:43.888+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:12:43.888+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:12:43.888+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:44.096+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:12:44.094+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:12:44.097+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:12:44.117+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.232 seconds
+[2023-03-24T15:13:15.000+0000] {processor.py:153} INFO - Started process (PID=324) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:15.000+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:13:15.001+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:13:15.001+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:15.277+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:13:15.275+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:13:15.277+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:15.309+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.313 seconds
+[2023-03-24T15:13:45.978+0000] {processor.py:153} INFO - Started process (PID=379) to work on /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:45.979+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc_dag.py for tasks to queue
+[2023-03-24T15:13:45.980+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:13:45.980+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:46.279+0000] {logging_mixin.py:137} INFO - [2023-03-24T15:13:46.277+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/adhoc_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/adhoc_dag.py", line 15, in <module>
+    aws_access_key_id = config('aws_access_key_id')
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 248, in __call__
+    return self.config(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 107, in __call__
+    return self.get(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/decouple.py", line 92, in get
+    raise UndefinedValueError('{} not found. Declare it as envvar or define a default value.'.format(option))
+decouple.UndefinedValueError: aws_access_key_id not found. Declare it as envvar or define a default value.
+[2023-03-24T15:13:46.279+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/adhoc_dag.py
+[2023-03-24T15:13:46.303+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc_dag.py took 0.328 seconds
