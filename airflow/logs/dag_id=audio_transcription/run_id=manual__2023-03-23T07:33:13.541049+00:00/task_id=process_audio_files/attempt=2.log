@@ -1,0 +1,32 @@
+[2023-03-23T07:38:20.008+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-23T07:33:13.541049+00:00 [queued]>
+[2023-03-23T07:38:20.034+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-23T07:33:13.541049+00:00 [queued]>
+[2023-03-23T07:38:20.035+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T07:38:20.036+0000] {taskinstance.py:1280} INFO - Starting attempt 2 of 2
+[2023-03-23T07:38:20.037+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-23T07:38:20.063+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_audio_files> on 2023-03-23 07:33:13.541049+00:00
+[2023-03-23T07:38:20.102+0000] {standard_task_runner.py:55} INFO - Started process 2087 to run task
+[2023-03-23T07:38:20.117+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'process_audio_files', 'manual__2023-03-23T07:33:13.541049+00:00', '--job-id', '226', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmp0lj5__4t']
+[2023-03-23T07:38:20.125+0000] {standard_task_runner.py:83} INFO - Job 226: Subtask process_audio_files
+[2023-03-23T07:38:20.330+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.process_audio_files manual__2023-03-23T07:33:13.541049+00:00 [running]> on host 4cfafc0b23b8
+[2023-03-23T07:38:20.499+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=process_audio_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-23T07:33:13.541049+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-23T07:33:13.541049+00:00
+[2023-03-23T07:38:24.031+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/adhoc.py", line 52, in process_audio_files
+    audio_file.name = key  # Use the S3 object key as the file name
+TypeError: transcribe_audio_file() missing 1 required positional argument: 'key'
+[2023-03-23T07:38:24.052+0000] {taskinstance.py:1323} INFO - Marking task as FAILED. dag_id=audio_transcription, task_id=process_audio_files, execution_date=20230323T073313, start_date=20230323T073820, end_date=20230323T073824
+[2023-03-23T07:38:24.066+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 226 for task process_audio_files (transcribe_audio_file() missing 1 required positional argument: 'key'; 2087)
+[2023-03-23T07:38:24.207+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-23T07:38:24.242+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

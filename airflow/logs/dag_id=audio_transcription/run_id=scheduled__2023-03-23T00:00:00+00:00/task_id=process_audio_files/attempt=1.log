@@ -1,0 +1,102 @@
+[2023-03-24T00:02:18.208+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files scheduled__2023-03-23T00:00:00+00:00 [queued]>
+[2023-03-24T00:02:18.220+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files scheduled__2023-03-23T00:00:00+00:00 [queued]>
+[2023-03-24T00:02:18.221+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T00:02:18.222+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-24T00:02:18.223+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-24T00:02:18.233+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_audio_files> on 2023-03-23 00:00:00+00:00
+[2023-03-24T00:02:18.240+0000] {standard_task_runner.py:55} INFO - Started process 4658 to run task
+[2023-03-24T00:02:18.244+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'process_audio_files', 'scheduled__2023-03-23T00:00:00+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmppfbkle2s']
+[2023-03-24T00:02:18.246+0000] {standard_task_runner.py:83} INFO - Job 233: Subtask process_audio_files
+[2023-03-24T00:02:18.296+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.process_audio_files scheduled__2023-03-23T00:00:00+00:00 [running]> on host 4cfafc0b23b8
+[2023-03-24T00:02:18.353+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=process_audio_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-23T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-23T00:00:00+00:00
+[2023-03-24T00:02:30.067+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/httpsession.py", line 464, in send
+    chunked=self._chunked(request.headers),
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 525, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <botocore.awsrequest.AWSHTTPSConnection object at 0xffff9c8af050>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/adhoc.py", line 61, in process_audio_files
+    objects = s3.list_objects_v2(Bucket=s3_bucket_name)['Contents']
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 944, in _make_api_call
+    operation_model, request_dict, request_context
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/client.py", line 966, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/endpoint.py", line 207, in _send_request
+    exception,
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/endpoint.py", line 361, in _needs_retry
+    request_dict=request_dict,
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 207, in __call__
+    if self._checker(**checker_kwargs):
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 285, in __call__
+    attempt_number, response, caught_exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 320, in _should_retry
+    return self._checker(attempt_number, response, caught_exception)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 364, in __call__
+    attempt_number, response, caught_exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 248, in __call__
+    attempt_number, caught_exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/retryhandler.py", line 416, in _check_caught_exception
+    raise caught_exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/endpoint.py", line 281, in _do_get_response
+    http_response = self._send(request)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/endpoint.py", line 377, in _send
+    return self.http_session.send(request)
+  File "/home/airflow/.local/lib/python3.7/site-packages/botocore/httpsession.py", line 484, in send
+    raise EndpointConnectionError(endpoint_url=request.url, error=e)
+botocore.exceptions.EndpointConnectionError: Could not connect to the endpoint URL: "https://raw-assignment4.s3.amazonaws.com/?list-type=2&encoding-type=url"
+[2023-03-24T00:02:30.209+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=audio_transcription, task_id=process_audio_files, execution_date=20230323T000000, start_date=20230324T000218, end_date=20230324T000230
+[2023-03-24T00:02:30.279+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 233 for task process_audio_files (Could not connect to the endpoint URL: "https://raw-assignment4.s3.amazonaws.com/?list-type=2&encoding-type=url"; 4658)
+[2023-03-24T00:02:30.512+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-24T00:02:30.573+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
