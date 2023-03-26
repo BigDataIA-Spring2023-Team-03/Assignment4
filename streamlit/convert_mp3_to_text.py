@@ -11,8 +11,6 @@ import boto3
 from botocore.client import Config
 import json
 
-
-
 def convert_mp3_to_text_function(mp3_file_key: str):
 
     load_dotenv()
@@ -43,17 +41,6 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     print(mp3_url)
 
 
-
-    # Call the Whisper API to convert the MP3 file to text
-    # headers = {"Authorization": f"Bearer {os.getenv('WHISPER_API_KEY')}"}
-    # url = "https://api.whisper.ai/v1/recognize"
-    # response = requests.post(url, headers=headers, data=mp3_file, stream=True)
-    # response.raise_for_status()
-
-    # # Extract the transcript and confidence score from the API response
-    # data = response.json()
-    # transcript = data["transcript"]
-
     url = "https://transcribe.whisperapi.com"
     headers = {
     'Authorization': 'Bearer ' + whisper_api_key
@@ -72,12 +59,17 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     "task": "transcribe" #default is transcribe. Other option is "translate"
     #translate will translate speech from language to english
     }
+
     response = requests.post(url, headers=headers, data=data)
+
     print("\n",type(response.text))
     print("\n")
+    
     # Convert response to JSON object and extract text attribute
     response_json = json.loads(response.text)
+    print("\n Response from Whisper API:",response_json)
     text = response_json['text']
+
     file_upload_name = mp3_file_key[:-4] + ".txt"
     with open('my_file.txt', 'w') as f:
         f.write(text)
@@ -85,9 +77,8 @@ def convert_mp3_to_text_function(mp3_file_key: str):
     # Upload text data to S3 bucket
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     s3.put_object(Body=text, Bucket=s3_bucket_name, Key=s3_bucket_folder+ file_upload_name)
-    
 
-    return response.text
+    return text
 
 
 
