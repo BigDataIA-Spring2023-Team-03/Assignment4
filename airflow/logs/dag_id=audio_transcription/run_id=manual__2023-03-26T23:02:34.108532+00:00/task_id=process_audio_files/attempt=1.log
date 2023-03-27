@@ -1,0 +1,23 @@
+[2023-03-26T23:02:36.103+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-26T23:02:34.108532+00:00 [queued]>
+[2023-03-26T23:02:36.144+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-26T23:02:34.108532+00:00 [queued]>
+[2023-03-26T23:02:36.145+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T23:02:36.145+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-26T23:02:36.148+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T23:02:36.218+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_audio_files> on 2023-03-26 23:02:34.108532+00:00
+[2023-03-26T23:02:36.232+0000] {standard_task_runner.py:55} INFO - Started process 20392 to run task
+[2023-03-26T23:02:36.242+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'process_audio_files', 'manual__2023-03-26T23:02:34.108532+00:00', '--job-id', '142', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmp5pr9leib']
+[2023-03-26T23:02:36.248+0000] {standard_task_runner.py:83} INFO - Job 142: Subtask process_audio_files
+[2023-03-26T23:02:36.510+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.process_audio_files manual__2023-03-26T23:02:34.108532+00:00 [running]> on host f6c753b92a52
+[2023-03-26T23:02:36.772+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=process_audio_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-26T23:02:34.108532+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-26T23:02:34.108532+00:00
+[2023-03-26T23:02:41.028+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-26T23:02:41.058+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=audio_transcription, task_id=process_audio_files, execution_date=20230326T230234, start_date=20230326T230236, end_date=20230326T230241
+[2023-03-26T23:02:41.125+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-26T23:02:41.179+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

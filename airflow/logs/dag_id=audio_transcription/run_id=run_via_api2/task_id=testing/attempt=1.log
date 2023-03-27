@@ -1,0 +1,25 @@
+[2023-03-26T20:18:19.866+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.testing run_via_api2 [queued]>
+[2023-03-26T20:18:19.903+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.testing run_via_api2 [queued]>
+[2023-03-26T20:18:19.903+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T20:18:19.904+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-26T20:18:19.904+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T20:18:19.951+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): testing> on 2023-03-26 20:18:16.713523+00:00
+[2023-03-26T20:18:19.962+0000] {standard_task_runner.py:55} INFO - Started process 7679 to run task
+[2023-03-26T20:18:19.975+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'testing', 'run_via_api2', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmpjm0o65ea']
+[2023-03-26T20:18:19.990+0000] {standard_task_runner.py:83} INFO - Job 100: Subtask testing
+[2023-03-26T20:18:20.381+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.testing run_via_api2 [running]> on host f6c753b92a52
+[2023-03-26T20:18:20.771+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=testing
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-26T20:18:16.713523+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=run_via_api2
+[2023-03-26T20:18:20.774+0000] {logging_mixin.py:137} INFO - Current Working Directory: /opt/***
+[2023-03-26T20:18:20.775+0000] {logging_mixin.py:137} INFO - File Input from Streamlit: jared_api_test
+[2023-03-26T20:18:20.775+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-26T20:18:20.813+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=audio_transcription, task_id=testing, execution_date=20230326T201816, start_date=20230326T201819, end_date=20230326T201820
+[2023-03-26T20:18:20.883+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-26T20:18:20.994+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,32 @@
+[2023-03-26T19:15:17.011+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_text scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2023-03-26T19:15:17.045+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_text scheduled__2023-03-25T00:00:00+00:00 [queued]>
+[2023-03-26T19:15:17.046+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T19:15:17.046+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-26T19:15:17.046+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-26T19:15:17.094+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): push_text> on 2023-03-25 00:00:00+00:00
+[2023-03-26T19:15:17.106+0000] {standard_task_runner.py:55} INFO - Started process 1619 to run task
+[2023-03-26T19:15:17.126+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'push_text', 'scheduled__2023-03-25T00:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmpacdhrw9s']
+[2023-03-26T19:15:17.131+0000] {standard_task_runner.py:83} INFO - Job 78: Subtask push_text
+[2023-03-26T19:15:17.314+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.push_text scheduled__2023-03-25T00:00:00+00:00 [running]> on host f6c753b92a52
+[2023-03-26T19:15:17.583+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=push_text
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-25T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-25T00:00:00+00:00
+[2023-03-26T19:15:18.352+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/adhoc.py", line 64, in push_text
+    os.remove(file_name)
+FileNotFoundError: [Errno 2] No such file or directory: 'audio1.txt'
+[2023-03-26T19:15:18.367+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=audio_transcription, task_id=push_text, execution_date=20230325T000000, start_date=20230326T191517, end_date=20230326T191518
+[2023-03-26T19:15:18.420+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 78 for task push_text ([Errno 2] No such file or directory: 'audio1.txt'; 1619)
+[2023-03-26T19:15:18.464+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-26T19:15:18.593+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2023-03-27T11:48:01.367+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-27T11:47:58.443029+00:00 [queued]>
+[2023-03-27T11:48:01.376+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.process_audio_files manual__2023-03-27T11:47:58.443029+00:00 [queued]>
+[2023-03-27T11:48:01.376+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-27T11:48:01.376+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-27T11:48:01.376+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-27T11:48:01.392+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_audio_files> on 2023-03-27 11:47:58.443029+00:00
+[2023-03-27T11:48:01.396+0000] {standard_task_runner.py:55} INFO - Started process 1984 to run task
+[2023-03-27T11:48:01.399+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'process_audio_files', 'manual__2023-03-27T11:47:58.443029+00:00', '--job-id', '192', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmppne_tnlz']
+[2023-03-27T11:48:01.401+0000] {standard_task_runner.py:83} INFO - Job 192: Subtask process_audio_files
+[2023-03-27T11:48:01.466+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.process_audio_files manual__2023-03-27T11:47:58.443029+00:00 [running]> on host f6c753b92a52
+[2023-03-27T11:48:01.562+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=process_audio_files
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-27T11:47:58.443029+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-27T11:47:58.443029+00:00
+[2023-03-27T11:49:17.392+0000] {local_task_job.py:273} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-03-27T11:49:17.395+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 1984. PIDs of all processes in the group: [1984]
+[2023-03-27T11:49:17.395+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 1984
+[2023-03-27T11:49:17.396+0000] {taskinstance.py:1479} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-03-27T11:49:17.457+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=1984, status='terminated', exitcode=0, started='11:48:01') (1984) terminated with exit code 0
