@@ -5,6 +5,7 @@ airflow/.env
 openai_venv
 
 # jv
+JV
 Notes.txt
 jv_scrap.py
 

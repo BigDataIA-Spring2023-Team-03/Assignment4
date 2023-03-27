@@ -1,0 +1,34 @@
+[2023-03-27T00:16:09.032+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_answers manual__2023-03-27T00:16:05.870935+00:00 [queued]>
+[2023-03-27T00:16:09.082+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_answers manual__2023-03-27T00:16:05.870935+00:00 [queued]>
+[2023-03-27T00:16:09.082+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-27T00:16:09.083+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-27T00:16:09.087+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-27T00:16:09.182+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): push_answers> on 2023-03-27 00:16:05.870935+00:00
+[2023-03-27T00:16:09.260+0000] {standard_task_runner.py:55} INFO - Started process 25871 to run task
+[2023-03-27T00:16:09.270+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'push_answers', 'manual__2023-03-27T00:16:05.870935+00:00', '--job-id', '161', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmpxfdw3sv1']
+[2023-03-27T00:16:09.277+0000] {standard_task_runner.py:83} INFO - Job 161: Subtask push_answers
+[2023-03-27T00:16:09.550+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.push_answers manual__2023-03-27T00:16:05.870935+00:00 [running]> on host f6c753b92a52
+[2023-03-27T00:16:09.803+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=push_answers
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-27T00:16:05.870935+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-27T00:16:05.870935+00:00
+[2023-03-27T00:16:10.548+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/adhoc.py", line 129, in push_answers
+    answers = ti.xcom_pull(task_ids=['default_quessionaire'], key='answers')[0]
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/xcom.py", line 757, in __getitem__
+    raise IndexError(key) from None
+IndexError: 0
+[2023-03-27T00:16:10.568+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=audio_transcription, task_id=push_answers, execution_date=20230327T001605, start_date=20230327T001609, end_date=20230327T001610
+[2023-03-27T00:16:10.647+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 161 for task push_answers (0; 25871)
+[2023-03-27T00:16:10.707+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-27T00:16:10.753+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
