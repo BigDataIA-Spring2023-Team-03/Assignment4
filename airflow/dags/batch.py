@@ -11,17 +11,11 @@ import openai
 
 aws_access_key_id = Variable.get('AWS_ACCESS_KEY_ID')
 aws_secret_access_key = Variable.get('AWS_SECRET_ACCESS_KEY')
-s3_bucket_name = 'adhoc-assignment4'
+s3_bucket_name = 'batch-assignment4'
 
 whisper_secret_key = Variable.get('WHISPER_API_SECRET')
 
 openai.api_key = whisper_secret_key
-
-# PARAMS --> from Streamlit
-user_input = {
-    "filename": Param('No File Name!', type='string')
-}
-
 
 default_args = {
     'owner': 'airflow',
@@ -39,11 +33,6 @@ dag = DAG(
     params=user_input
 )
 
-# TESTING
-# def testing(**kwargs):
-#     print(f'Current Working Directory: {os.getcwd()}')
-#     print(f"File Input from Streamlit: {kwargs['dag_run'].conf['filename']}")
-
 def transcribe_audio_file(bucket_name, key):
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     response = s3.get_object(Bucket=bucket_name, Key='raw/' + key)
@@ -54,11 +43,14 @@ def transcribe_audio_file(bucket_name, key):
 
     return transcription
 
-def process_audio_files(ti, **kwargs):
-    filename = kwargs['dag_run'].conf['filename']
-    if "/" in filename:
-        filename = filename.split('/')[-1]
-    ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, filename))
+def process_audio_files(ti):
+    s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+    objects = s3.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')['Contents']
+    for obj in objects:
+        key = obj['Key']
+        if key.endswith('.mp3') or key.endswith('.wav'):
+            filename = key.split('/')[-1]
+            ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, key))
 
 
 def push_text(ti, **kwargs):
