@@ -1,5 +1,3 @@
-#Author: Raj Mehta
-#Description: Front end code for Audio Transcription
 import os
 import streamlit as st
 import boto3
