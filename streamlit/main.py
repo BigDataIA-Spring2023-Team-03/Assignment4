@@ -1,5 +1,3 @@
-#Author: Raj Mehta
-#Description: Front end code for Audio Transcription
 import os
 import streamlit as st
 import boto3
@@ -42,7 +40,7 @@ def check_dag_status():
     #     print('failure')
 
     # TESTING
-    st.write(f"- {response_json['dag_runs'][-1]['state']})
+    st.write(f"- {response_json['dag_runs'][-1]['state']}")
     return state
 
 
