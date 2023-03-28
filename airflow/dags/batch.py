@@ -26,13 +26,14 @@ default_args = {
 }
 
 dag = DAG(
-    'audio_transcription',
+    'audio_transcription_batch',
     default_args=default_args,
-    description='Transcribe audio files from S3 using Whisper API',
+    description='Transcribe batch audio files from S3 using Whisper API',
     schedule_interval=timedelta(days=1),
-    params=user_input
+    # params=user_input
 )
 
+# TODO - can merge these 2 below functions, no point of having 2 s3 clients
 def transcribe_audio_file(bucket_name, key):
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     response = s3.get_object(Bucket=bucket_name, Key='raw/' + key)
@@ -43,22 +44,21 @@ def transcribe_audio_file(bucket_name, key):
 
     return transcription
 
-def process_audio_files(ti):
-    s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    objects = s3.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')['Contents']
-    for obj in objects:
-        key = obj['Key']
-        if key.endswith('.mp3') or key.endswith('.wav'):
-            filename = key.split('/')[-1]
-            ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, key))
+def process_audio_files(ti, **kwargs):
+    filename = kwargs['filename']
+    index = kwargs['index']
+    if "/" in filename:
+        filename = filename.split('/')[-1]
+    ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, filename))
 
 
 def push_text(ti, **kwargs):
-    filename = kwargs['dag_run'].conf['filename']
+    filename = kwargs['filename']
+    index = kwargs['index']
     if "/" in filename:
         filename = filename.split('/')[-1]
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    transcribed_audio = ti.xcom_pull(task_ids=['process_audio_files'], key=filename)[0]['text']
+    transcribed_audio = ti.xcom_pull(task_ids=[f'process_audio_files_{index}'], key=filename)[0]['text']
     transcript_file = f"{filename.split('.')[0]}_transcript.txt"
 
     with open(transcript_file, 'w') as f:
@@ -71,19 +71,16 @@ def push_text(ti, **kwargs):
 
 
 def default_quessionaire(ti, **kwargs):
-    # filename from streamlit
-    filename = kwargs['dag_run'].conf['filename']
+    filename = kwargs['filename']
+    index = kwargs['index']
     if "/" in filename:
         filename = filename.split('/')[-1]
-    # s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    transcribed_audio = ti.xcom_pull(task_ids=['process_audio_files'], key=filename)[0]['text']
-    # file_name = 'audio1.txt'
+    transcribed_audio = ti.xcom_pull(task_ids=[f'process_audio_files_{index}'], key=filename)[0]['text']
     default_questions_answers = {
         "Summarize the topic of following text in three words or less:": "",
         "How many people might be involved in the audio?": "",
         "What are the names of the people in the audio?": ""
     }
-    # file_name = 'audio1_answers.txt'
     for i, (j,k) in enumerate(default_questions_answers.items()):
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -98,12 +95,13 @@ def default_quessionaire(ti, **kwargs):
 
 def push_answers(ti, **kwargs):
     # filename from streamlit
-    filename = kwargs['dag_run'].conf['filename']
+    filename = kwargs['filename']
+    index = kwargs['index']
     if "/" in filename:
         filename = filename.split('/')[-1]
 
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    answers = ti.xcom_pull(task_ids=['default_quessionaire'], key='answers')[0]
+    answers = ti.xcom_pull(task_ids=[f'default_quessionaire_{index}'], key='answers')[0]
     answer_file = f"{filename.split('.')[0]}_answers.json"
 
     # TESTING
@@ -132,55 +130,69 @@ def clear_xcoms(**context):
 #     dag=dag
 # )
 
-process_audio_files = PythonOperator(
-    task_id='process_audio_files',
-    provide_context=True,
-    python_callable=process_audio_files,
-    dag=dag
-)
+s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
+s3_objects = s3.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')
+s3_files = [obj["Key"] for obj in s3_objects.get("Contents", []) if not obj['Key'] == 'raw/']
 
-push_text = PythonOperator(
-    task_id='push_text',
-    provide_context=True,
-    python_callable=push_text,
-    dag=dag
-)
-
-default_quessionaire = PythonOperator(
-    task_id='default_quessionaire',
-    provide_context=True,
-    python_callable=default_quessionaire,
-    dag=dag
-)
-
-push_answers = PythonOperator(
-    task_id='push_answers',
-    provide_context=True,
-    python_callable=push_answers,
-    dag=dag
-)
-
-# clear_xcoms = PythonOperator(
-#     task_id='clear_xcoms',
-#     python_callable=clear_xcoms,
-#     provide_context=True,
-#     dag=dag
-# )
-
-start = DummyOperator(
-    task_id='start',
-    dag=dag
-)
-
-end = DummyOperator(
-    task_id='end',
-    dag=dag
-)
+print(s3_files)
 
 
-###################################################################################################
 
-start >> process_audio_files >> [push_text, default_quessionaire]
-default_quessionaire >> push_answers
-push_text >> end
-push_answers >> end
+for i,file in enumerate(s3_files):
+    task_process_audio_files = PythonOperator(
+        task_id=f'process_audio_files_{i}',
+        provide_context=True,
+        python_callable=process_audio_files,
+        op_kwargs={'filename': file, 'index': i},
+        dag=dag
+    )
+
+    task_push_text = PythonOperator(
+        task_id=f'push_text_{i}',
+        provide_context=True,
+        python_callable=push_text,
+        op_kwargs={'filename': file, 'index': i},
+        dag=dag
+    )
+
+    task_default_quessionaire = PythonOperator(
+        task_id=f'default_quessionaire_{i}',
+        provide_context=True,
+        python_callable=default_quessionaire,
+        op_kwargs={'filename': file, 'index': i},
+        dag=dag
+    )
+
+    task_push_answers = PythonOperator(
+        task_id=f'push_answers_{i}',
+        provide_context=True,
+        python_callable=push_answers,
+        op_kwargs={'filename': file, 'index': i},
+        dag=dag
+    )
+
+    # clear_xcoms = PythonOperator(
+    #     task_id='clear_xcoms',
+    #     python_callable=clear_xcoms,
+    #     provide_context=True,
+    #     dag=dag
+    # )
+
+    task_start = DummyOperator(
+        task_id=f'start_{i}',
+        dag=dag
+    )
+
+
+    task_end = DummyOperator(
+        task_id=f'end_{i}',
+        dag=dag
+    )
+
+
+    ###################################################################################################
+
+    task_start >> task_process_audio_files >> [task_push_text, task_default_quessionaire]
+    task_default_quessionaire >> task_push_answers
+    task_push_text >> task_end
+    task_push_answers >> task_end

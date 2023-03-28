@@ -15,7 +15,7 @@ aws_secret_access_key = os.environ.get("aws_secret_access_key")
 
 # Get the S3 bucket name and region from the environment variables
 # s3_bucket_name = os.environ.get("S3_BUCKET_NAME")
-s3_bucket_name = 'raw-assignment4'
+s3_bucket_name = 'batch-assignment4'
 
 # Create an S3 client
 s3_client = boto3.client(
@@ -74,7 +74,7 @@ if password != '':
                 print("tick")
                 time.sleep(30.0 - ((time.time() - starttime) % 30.0))
 
-            Select a file and Read Transcript or q&a from S3
+            # Select a file and Read Transcript or q&a from S3
             selected_file = st.selectbox("Select a File:", ["None"] + s3_files)
             desired_output = st.selectbox("Desired Output - Transcript or Q&A:", ["None"] + ['Transcript', 'Q&A'])
 
