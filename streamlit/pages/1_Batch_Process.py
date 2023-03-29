@@ -6,6 +6,14 @@ import requests
 import time
 from main import check_dag_status
 import json
+from Logging.aws_logging import * # write_logs
+
+# DEV or PROD
+environment = 'DEV'
+if environment == 'DEV':
+    webserver = 'localhost:8080'
+elif environment == 'PROD':
+    webserver = 'airflow-airflow-webserver-1:8080'
 
 # Load the environment variables from the .env file
 load_dotenv()
@@ -16,7 +24,7 @@ aws_secret_access_key = os.environ.get("aws_secret_access_key")
 
 # Get the S3 bucket name and region from the environment variables
 # s3_bucket_name = os.environ.get("S3_BUCKET_NAME")
-s3_bucket_name = 'batch-assignment4'
+s3_bucket_name = 'batch-assignment-4'
 
 # Create an S3 client
 s3_client = boto3.client(
@@ -48,7 +56,6 @@ if 'dag_executed' not in st.session_state:
 st.title("Batch Process")
 st.write('This process reads all the files from the Batch Folder in AWS S3. The transcript for these audio files extracted. Additionally, the core questions and answers from the transcript are extracted. These files are saved off in AWS S3.')
 
-# @st.cache
 # Enter Password to Access Batch Functionality
 password = st.text_input("Enter Password:")
 
@@ -66,6 +73,8 @@ if password != '':
 
         # Convert files to transcript and Q&A
         if st.checkbox(f"Convert {len(s3_files)} Files to Transcript"):
+            # AWS CloudWatch Logging
+            write_logs(f'Process: BATCH, Total Files: {len(s3_files)}, files: {s3_files}')
             
             if not st.session_state.dag_executed:
                 # TESTING
@@ -76,7 +85,7 @@ if password != '':
                         "dag_run_id": "",
                         "conf": {}
                         }
-                response = requests.post(url = 'http://localhost:8080/api/v1/dags/audio_transcription_batch/dagRuns', json=data, auth=('airflow2','airflow2'))
+                response = requests.post(url = f'http://{webserver}/api/v1/dags/audio_transcription_batch/dagRuns', json=data, auth=('airflow2','airflow2'))
                 if response.status_code == 409:
                     st.error(f'{filename} already transferred to S3!')
 
@@ -93,6 +102,10 @@ if password != '':
                 while check_dag_status("audio_transcription_batch") not in ('failed', 'success'):
                     print("tick")
                     time.sleep(30.0 - ((time.time() - starttime) % 30.0))
+
+                # AWS CloudWatch Logging
+                write_logs(f'Process: BATCH, DAG_RUN_ID: {dag_run_id}, Status: {check_dag_status("audio_transcription")}')
+
 
                 # Dag runs successfully
                 if check_dag_status("audio_transcription_batch") == 'success':
@@ -124,6 +137,10 @@ if st.session_state.dag_executed:
                 st.write(f'Filename: processed/{transcript_file}')
                 st.write('Transcript:')
                 st.write(response_transcript)
+
+                # AWS CloudWatch Logging
+                write_logs(f'Viewed, filename: {transcript_file}')
+                        
             else:
                 answer_file = f"{st.session_state.selected_file.split('.')[0]}_answers.json"
                 response = s3_client.get_object(Bucket=s3_bucket_name, Key=f'answers/{answer_file}')
@@ -131,6 +148,9 @@ if st.session_state.dag_executed:
                 st.write(f'Filename: processed/{answer_file}')
                 st.write('Answers:')
                 st.json(response_answers)
+
+                # AWS CloudWatch Logging
+                write_logs(f'Viewed, filename: {answer_file}')
     
     # No more statements will be run
     # st.experimental_rerun()

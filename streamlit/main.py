@@ -7,7 +7,14 @@ import json
 import subprocess
 import time
 import openai
+from Logging.aws_logging import * # write_logs
 
+# DEV or PROD
+environment = 'DEV'
+if environment == 'DEV':
+    webserver = 'localhost:8080'
+elif environment == 'PROD':
+    webserver = 'airflow-airflow-webserver-1:8080'
 
 # Load the environment variables from the .env file
 load_dotenv()
@@ -20,10 +27,10 @@ aws_secret_access_key = os.environ.get("aws_secret_access_key")
 
 # Get the S3 bucket name and region from the environment variables
 # s3_bucket_name = os.environ.get("S3_BUCKET_NAME")
-s3_bucket_name = 'adhoc-assignment4'
+s3_bucket_name = 'adhoc-assignment-4'
 
-openai.organization = "org-1yfndFUb17q04b6u9hdKuPsn"
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.organization = "org-eul6p1H8uwpL8y7vA5l8cy02"
+openai.api_key = os.getenv("openai_api_key")
 
 # Create an S3 client
 s3_client = boto3.client(
@@ -43,7 +50,7 @@ if 'transcription_generated' not in st.session_state:
 
 # Check DAG Status
 def check_dag_status(dag_id):
-    url = f'http://airflow-airflow-webserver-1:8080/api/v1/dags/{dag_id}/dagRuns'
+    url = f'http://{webserver}/api/v1/dags/{dag_id}/dagRuns'
     response = requests.get(url = url, auth=('airflow2','airflow2'))
     response_json = response.json()
     state = response_json['dag_runs'][len(response_json['dag_runs'])-1]['state']
@@ -107,8 +114,12 @@ def main():
                 if uploaded_file or selected_file:
                     # If a file was uploaded or selected, get the file name and pass it to the conversion script
                     if uploaded_file:
+                        # AWS CloudWatch Logging
+                        write_logs(f'File Method: Uploaded, filename: {uploaded_file}')
                         filename = uploaded_file.name
                     else:
+                        # AWS CloudWatch Logging
+                        write_logs(f'File Method: Selected, filename: {selected_file}')
                         filename = selected_file
 
                     if not st.session_state.transcription_generated:
@@ -117,7 +128,7 @@ def main():
                                 "dag_run_id": "",
                                 "conf": {"filename": filename}
                                 }
-                        response = requests.post(url = 'http://airflow-airflow-webserver-1:8080/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
+                        response = requests.post(url = f'http://{webserver}/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
                         if response.status_code == 409:
                             st.error(f'{filename} already transferred to S3!')
 
@@ -135,6 +146,9 @@ def main():
                             st.write("tick")
                             time.sleep(30.0 - ((time.time() - starttime) % 30.0))
 
+                        # AWS CloudWatch Logging
+                        write_logs(f'Process: ADHOC, DAG_RUN_ID: {dag_run_id}, Status: {check_dag_status("audio_transcription")}')
+
                         if check_dag_status("audio_transcription") == 'success':
                             if '/' in filename:
                                 filename = filename.split('/')[-1]
@@ -145,7 +159,7 @@ def main():
                                     "xcom_key": filename
                                     }
 
-                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
+                            url = f"http://{webserver}/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                             response = requests.get(url=url, auth=('airflow2', 'airflow2'))
                             st.write(response.json())
@@ -161,7 +175,7 @@ def main():
                                     "xcom_key": "answers"
                                     }
 
-                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
+                            url = f"http://{webserver}/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                             response = requests.get(url = url, auth=('airflow2','airflow2'))
 
@@ -174,6 +188,9 @@ def main():
                         st.write("### Custom Question")
                         custom_question = st.text_input("What would you like to ask?")
                         if custom_question != "":
+                            # AWS CloudWatch Logging
+                            write_logs(f'Custom Question: {custom_question}')
+
                             # Generate the answer using OpenAI's GPT-3
                             answer = openai.Completion.create(
                                 engine="text-davinci-002",
@@ -187,6 +204,9 @@ def main():
                             # Print the answer
                             st.write("### Answer")
                             st.write(answer.choices[0].text.strip())
+
+                            # AWS CloudWatch Logging
+                            write_logs(f'GPT Answer: {answer.choices[0].text.strip()}')
 
                     else:
                         st.error(f'Airflow DAG failed!')

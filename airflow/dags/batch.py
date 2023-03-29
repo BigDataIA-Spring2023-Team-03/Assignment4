@@ -11,7 +11,7 @@ import openai
 
 aws_access_key_id = Variable.get('AWS_ACCESS_KEY_ID')
 aws_secret_access_key = Variable.get('AWS_SECRET_ACCESS_KEY')
-s3_bucket_name = 'batch-assignment4'
+s3_bucket_name = 'batch-assignment-4'
 
 whisper_secret_key = Variable.get('WHISPER_API_SECRET')
 
