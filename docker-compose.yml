@@ -1,0 +1,18 @@
+version: "3"
+services:
+  app:
+    env_file:
+      - .env
+    container_name: frontend
+    build:
+      dockerfile: Dockerfile
+    command: "streamlit run --server.port 8501 --server.enableCORS false main.py"
+    ports:
+      - "8501:8501"
+    networks:
+      - airflow_default
+    image: frontend:latest
+
+networks:
+  airflow_default:
+    external: true

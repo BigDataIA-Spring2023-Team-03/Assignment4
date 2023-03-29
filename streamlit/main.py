@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 import requests
 import json
 import subprocess
-from convert_mp3_to_text import convert_mp3_to_text_function
 import time
 import openai
 
@@ -44,16 +43,11 @@ if 'transcription_generated' not in st.session_state:
 
 # Check DAG Status
 def check_dag_status():
-    url = 'http://localhost:8080/api/v1/dags/audio_transcription/dagRuns'
+    url = 'http://airflow-airflow-webserver-1:8080/api/v1/dags/audio_transcription/dagRuns'
     response = requests.get(url = url, auth=('airflow2','airflow2'))
     response_json = response.json()
-    # most recent dag_run
-    state = response_json['dag_runs'][-1]['state']
-    # if response_json['dag_runs'][0]['state'] == 'failed':
-    #     print('failure')
-
-    # TESTING
-    st.write(f"- {response_json['dag_runs'][-1]['state']}")
+    state = response_json['dag_runs'][len(response_json['dag_runs'])-1]['state']
+    # st.write(response_json['dag_runs'][len(response_json['dag_runs'])-1]['dag_run_id'])
     return state
 
 
@@ -123,11 +117,11 @@ def main():
                                 "dag_run_id": "",
                                 "conf": {"filename": filename}
                                 }
-                        response = requests.post(url = 'http://localhost:8080/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
+                        response = requests.post(url = 'http://airflow-airflow-webserver-1:8080/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
                         if response.status_code == 409:
                             st.error(f'{filename} already transferred to S3!')
 
-                        # st.write(f"Dag_run_id: {response.json()['dag_run_id']}")
+                        st.write(f"Dag_run_id: {response.json()}")
 
                         dag_run_id = response.json()['dag_run_id']
 
@@ -135,7 +129,7 @@ def main():
 
                         starttime = time.time()
                         while check_dag_status() not in ('failed', 'success'):
-                            # print("tick")
+                            st.write("tick")
                             time.sleep(30.0 - ((time.time() - starttime) % 30.0))
 
                         if check_dag_status() == 'success':
@@ -148,10 +142,10 @@ def main():
                                     "xcom_key": filename
                                     }
 
-                            url = f"http://localhost:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
+                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                             response = requests.get(url=url, auth=('airflow2', 'airflow2'))
-                            # st.write(response.json())
+                            st.write(response.json())
 
                             response_transcript = response.json()['value']
                             st.session_state.transcript = response_transcript
@@ -164,7 +158,7 @@ def main():
                                     "xcom_key": "answers"
                                     }
 
-                            url = f"http://localhost:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
+                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                             response = requests.get(url = url, auth=('airflow2','airflow2'))
 
