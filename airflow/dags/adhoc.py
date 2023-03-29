@@ -9,11 +9,9 @@ from airflow.operators.dummy import DummyOperator
 from airflow.models.param import Param
 import openai
 
-# TODO: get filename from the streamlit after uploading it to s3 bucket
-
 aws_access_key_id = Variable.get('AWS_ACCESS_KEY_ID')
 aws_secret_access_key = Variable.get('AWS_SECRET_ACCESS_KEY')
-s3_bucket_name = 'raw-assignment4'
+s3_bucket_name = 'adhoc-assignment4'
 
 whisper_secret_key = Variable.get('WHISPER_API_SECRET')
 
@@ -42,16 +40,13 @@ dag = DAG(
 )
 
 # TESTING
-def testing(**kwargs):
-    print(f'Current Working Directory: {os.getcwd()}')
-    
-    print(f"File Input from Streamlit: {kwargs['dag_run'].conf['filename']}")
-
-
+# def testing(**kwargs):
+#     print(f'Current Working Directory: {os.getcwd()}')
+#     print(f"File Input from Streamlit: {kwargs['dag_run'].conf['filename']}")
 
 def transcribe_audio_file(bucket_name, key):
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    response = s3.get_object(Bucket=bucket_name, Key=key)
+    response = s3.get_object(Bucket=bucket_name, Key='raw/' + key)
     audio_data = response["Body"].read()
     audio_file = io.BytesIO(audio_data)
     audio_file.name = key
@@ -60,38 +55,25 @@ def transcribe_audio_file(bucket_name, key):
     return transcription
 
 def process_audio_files(ti, **kwargs):
-    # s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
-    # objects = s3.list_objects_v2(Bucket=s3_bucket_name)['Contents']
-    # for obj in objects:
-    #     filename = obj['Key']
-    #     if filename == 'audio1.wav':
-    #         ti.xcom_push(key=filename, value=transcribe_audio_file("raw-assignment4", filename))
-
-    # filename from streamlit
     filename = kwargs['dag_run'].conf['filename']
-
-    ti.xcom_push(key=filename, value=transcribe_audio_file("raw-assignment4", filename))
+    if "/" in filename:
+        filename = filename.split('/')[-1]
+    ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, filename))
 
 
 def push_text(ti, **kwargs):
-    # filename from streamlit
     filename = kwargs['dag_run'].conf['filename']
-
+    if "/" in filename:
+        filename = filename.split('/')[-1]
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     transcribed_audio = ti.xcom_pull(task_ids=['process_audio_files'], key=filename)[0]['text']
-    # file_name = 'audio1.txt'
-
     transcript_file = f"{filename.split('.')[0]}_transcript.txt"
-
-    # TESTING
-    print(transcript_file)
-    print(transcribed_audio)
 
     with open(transcript_file, 'w') as f:
         f.write(transcribed_audio)
 
     with open(transcript_file, 'rb') as data:
-        s3.upload_fileobj(data, 'processed-text-assignment4', transcript_file)
+        s3.upload_fileobj(data, s3_bucket_name, 'processed/' + transcript_file)
 
     os.remove(transcript_file)
 
@@ -99,7 +81,8 @@ def push_text(ti, **kwargs):
 def default_quessionaire(ti, **kwargs):
     # filename from streamlit
     filename = kwargs['dag_run'].conf['filename']
-
+    if "/" in filename:
+        filename = filename.split('/')[-1]
     # s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     transcribed_audio = ti.xcom_pull(task_ids=['process_audio_files'], key=filename)[0]['text']
     # file_name = 'audio1.txt'
@@ -124,11 +107,11 @@ def default_quessionaire(ti, **kwargs):
 def push_answers(ti, **kwargs):
     # filename from streamlit
     filename = kwargs['dag_run'].conf['filename']
+    if "/" in filename:
+        filename = filename.split('/')[-1]
 
     s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key)
     answers = ti.xcom_pull(task_ids=['default_quessionaire'], key='answers')[0]
-    # file_name = 'audio1-answers.json'
-
     answer_file = f"{filename.split('.')[0]}_answers.json"
 
     # TESTING
@@ -139,7 +122,7 @@ def push_answers(ti, **kwargs):
         f.write(json.dumps(answers))
 
     with open(answer_file, 'rb') as data:
-        s3.upload_fileobj(data, 'answers-assignment4', answer_file)
+        s3.upload_fileobj(data, s3_bucket_name, 'answers/' + answer_file)
 
     os.remove(answer_file)
 
@@ -150,19 +133,18 @@ def clear_xcoms(**context):
 
 ###################################################################################################
 # TASKS:
-testing = PythonOperator(
-    task_id='testing',
-    python_callable=testing,
-    provide_context=True, # for user inputs,
-    dag=dag
-)
+# testing = PythonOperator(
+#     task_id='testing',
+#     python_callable=testing,
+#     provide_context=True,
+#     dag=dag
+# )
 
 process_audio_files = PythonOperator(
     task_id='process_audio_files',
     provide_context=True,
     python_callable=process_audio_files,
     dag=dag
-    # do_xcom_push = True
 )
 
 push_text = PythonOperator(
@@ -205,10 +187,8 @@ end = DummyOperator(
 
 
 ###################################################################################################
-# FLOW: 
-# start >> testing >> end
 
-start >> testing >> process_audio_files >> [push_text, default_quessionaire]
+start >> process_audio_files >> [push_text, default_quessionaire]
 default_quessionaire >> push_answers
 push_text >> end
 push_answers >> end

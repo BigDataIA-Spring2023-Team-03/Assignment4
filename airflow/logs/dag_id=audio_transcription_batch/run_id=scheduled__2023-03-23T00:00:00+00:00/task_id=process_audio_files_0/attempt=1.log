@@ -1,0 +1,94 @@
+[2023-03-28T18:03:44.893+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription_batch.process_audio_files_0 scheduled__2023-03-23T00:00:00+00:00 [queued]>
+[2023-03-28T18:03:44.917+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription_batch.process_audio_files_0 scheduled__2023-03-23T00:00:00+00:00 [queued]>
+[2023-03-28T18:03:44.918+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-28T18:03:44.918+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-28T18:03:44.918+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-28T18:03:44.949+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): process_audio_files_0> on 2023-03-23 00:00:00+00:00
+[2023-03-28T18:03:44.957+0000] {standard_task_runner.py:55} INFO - Started process 462 to run task
+[2023-03-28T18:03:44.964+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription_batch', 'process_audio_files_0', 'scheduled__2023-03-23T00:00:00+00:00', '--job-id', '212', '--raw', '--subdir', 'DAGS_FOLDER/batch.py', '--cfg-path', '/tmp/tmp8ylyt2ia']
+[2023-03-28T18:03:44.967+0000] {standard_task_runner.py:83} INFO - Job 212: Subtask process_audio_files_0
+[2023-03-28T18:03:45.129+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription_batch.process_audio_files_0 scheduled__2023-03-23T00:00:00+00:00 [running]> on host f6c753b92a52
+[2023-03-28T18:03:45.317+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription_batch
+AIRFLOW_CTX_TASK_ID=process_audio_files_0
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-23T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-23T00:00:00+00:00
+[2023-03-28T18:13:49.810+0000] {taskinstance.py:1768} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1373, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/local/lib/python3.7/ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/local/lib/python3.7/ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 499, in send
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/packages/six.py", line 770, in reraise
+    raise value
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 341, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/openai/api_requestor.py", line 523, in request_raw
+    timeout=request_timeout if request_timeout else TIMEOUT_SECS,
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 578, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/batch.py", line 52, in process_audio_files
+    ti.xcom_push(key=filename, value=transcribe_audio_file(s3_bucket_name, filename))
+  File "/opt/airflow/dags/batch.py", line 43, in transcribe_audio_file
+    transcription = openai.Audio.transcribe("whisper-1", audio_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/openai/api_resources/audio.py", line 57, in transcribe
+    response, _, api_key = requestor.request("post", url, files=files, params=data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/openai/api_requestor.py", line 224, in request
+    request_timeout=request_timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/openai/api_requestor.py", line 526, in request_raw
+    raise error.Timeout("Request timed out: {}".format(e)) from e
+openai.error.Timeout: Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600)
+[2023-03-28T18:13:49.826+0000] {taskinstance.py:1323} INFO - Marking task as UP_FOR_RETRY. dag_id=audio_transcription_batch, task_id=process_audio_files_0, execution_date=20230323T000000, start_date=20230328T180344, end_date=20230328T181349
+[2023-03-28T18:13:49.840+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 212 for task process_audio_files_0 (Request timed out: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read timeout=600); 462)
+[2023-03-28T18:13:49.860+0000] {local_task_job.py:208} INFO - Task exited with return code 1
+[2023-03-28T18:13:49.882+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check

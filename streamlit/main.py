@@ -1,5 +1,3 @@
-#Author: Raj Mehta
-#Description: Front end code for Audio Transcription
 import os
 import streamlit as st
 import boto3
@@ -21,7 +19,7 @@ aws_secret_access_key = os.environ.get("aws_secret_access_key")
 
 # Get the S3 bucket name and region from the environment variables
 # s3_bucket_name = os.environ.get("S3_BUCKET_NAME")
-s3_bucket_name = 'raw-assignment4'
+s3_bucket_name = 'adhoc-assignment4'
 
 # Create an S3 client
 s3_client = boto3.client(
@@ -32,8 +30,8 @@ s3_client = boto3.client(
 
 
 # Check DAG Status
-def check_dag_status():
-    url = 'http://localhost:8080/api/v1/dags/audio_transcription/dagRuns'
+def check_dag_status(dag_id):
+    url = f'http://localhost:8080/api/v1/dags/{dag_id}/dagRuns'
     response = requests.get(url = url, auth=('airflow2','airflow2'))
     response_json = response.json()
     # most recent dag_run
@@ -42,7 +40,7 @@ def check_dag_status():
     #     print('failure')
 
     # TESTING
-    st.write(f"- {response_json['dag_runs'][-1]['state']})
+    st.write(f"- {response_json['dag_runs'][-1]['state']}")
     return state
 
 
@@ -55,8 +53,8 @@ def main():
     uploaded_file = st.file_uploader("Upload an MP3 file")
 
     # Create a dropdown to select an existing file from the S3 bucket
-    s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name)
-    s3_files = [obj["Key"] for obj in s3_objects.get("Contents", [])]
+    s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')
+    s3_files = [obj["Key"] for obj in s3_objects.get("Contents", []) if not obj['Key'] == 'raw/']
     selected_file = st.selectbox("Select an existing file from S3", ["None"] + s3_files)
 
     # Check if both an uploaded file and an S3 file were selected
@@ -75,7 +73,7 @@ def main():
 
             # Upload the file to the S3 bucket if it doesn't already exist
             if filename not in s3_files:
-                s3_client.upload_fileobj(uploaded_file, s3_bucket_name, filename)
+                s3_client.upload_fileobj(uploaded_file, s3_bucket_name, 'raw/' + filename)
                 st.write("File uploaded successfully!")
             else:
                 st.write("File already exists in S3 bucket.")
@@ -131,12 +129,14 @@ def main():
                     # API to get DAG status, only proceed when you have a state = success
                     # checks every 30 seconds if dag not failed or success
                     starttime = time.time()
-                    while check_dag_status() not in ('failed', 'success'):
+                    while check_dag_status("audio_transcription") not in ('failed', 'success'):
                         print("tick")
                         time.sleep(30.0 - ((time.time() - starttime) % 30.0))
 
-                    if check_dag_status() == 'success':
+                    if check_dag_status("audio_transcription") == 'success':
                         # API Call to Airflow to get transcript from XCOM
+                        if '/' in filename:
+                            filename = filename.split('/')[-1]
                         data = {
                                 "dag_id": "audio_transcription",
                                 "dag_run_id": dag_run_id,
@@ -148,8 +148,8 @@ def main():
                         # TESTING
                         # st.write(url, data)
 
-                        response = requests.get(url = url, auth=('airflow2','airflow2'))
-                        # st.write(response.json())
+                        response = requests.get(url=url, auth=('airflow2', 'airflow2'))
+                        st.write(response.json())
 
                         response_transcript = response.json()['value']
                         st.write('Transcript:')
