@@ -3,9 +3,10 @@ import streamlit as st
 import boto3
 from dotenv import load_dotenv
 import requests
+import json
 import subprocess
-from convert_mp3_to_text import convert_mp3_to_text_function
 import time
+import openai
 
 
 # Load the environment variables from the .env file
@@ -21,6 +22,9 @@ aws_secret_access_key = os.environ.get("aws_secret_access_key")
 # s3_bucket_name = os.environ.get("S3_BUCKET_NAME")
 s3_bucket_name = 'adhoc-assignment4'
 
+openai.organization = "org-1yfndFUb17q04b6u9hdKuPsn"
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
 # Create an S3 client
 s3_client = boto3.client(
     "s3",
@@ -28,19 +32,22 @@ s3_client = boto3.client(
     aws_secret_access_key=aws_secret_access_key,
 )
 
+if 'custom' not in st.session_state:
+    st.session_state.custom = False
+
+if 'transcript' not in st.session_state:
+    st.session_state.transcript = ''
+
+if 'transcription_generated' not in st.session_state:
+    st.session_state.transcription_generated = False
 
 # Check DAG Status
 def check_dag_status(dag_id):
-    url = f'http://localhost:8080/api/v1/dags/{dag_id}/dagRuns'
+    url = f'http://airflow-airflow-webserver-1:8080/api/v1/dags/{dag_id}/dagRuns'
     response = requests.get(url = url, auth=('airflow2','airflow2'))
     response_json = response.json()
-    # most recent dag_run
-    state = response_json['dag_runs'][-1]['state']
-    # if response_json['dag_runs'][0]['state'] == 'failed':
-    #     print('failure')
-
-    # TESTING
-    st.write(f"- {response_json['dag_runs'][-1]['state']}")
+    state = response_json['dag_runs'][len(response_json['dag_runs'])-1]['state']
+    # st.write(response_json['dag_runs'][len(response_json['dag_runs'])-1]['dag_run_id'])
     return state
 
 
@@ -91,11 +98,12 @@ def main():
 
         # If no file was selected
         else:
-            st.write("No file selected")
+            st.write("### No file selected")
 
         # Create a button to convert the file to transcript
         if uploaded_file or selected_file != "None":
-            if st.button("Convert to Transcript"):
+            # response_transcript = ''
+            if st.checkbox("Convert to Transcript"):
                 if uploaded_file or selected_file:
                     # If a file was uploaded or selected, get the file name and pass it to the conversion script
                     if uploaded_file:
@@ -103,82 +111,90 @@ def main():
                     else:
                         filename = selected_file
 
-                    # API Call to Airflow to execute process_audio_files_dag
-                    data = {
-                            "dag_run_id": "",
-                            "conf": {"filename": filename}
-                            }
-                    # TESTING
-                    # st.write(data)
-                    response = requests.post(url = 'http://localhost:8080/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
-                    # response = requests.post(url = 'http://backend:8000/s3_transfer', json=data, headers={'Authorization':  f'Bearer {st.session_state.access_token}'})
-                    if response.status_code == 409:
-                        st.error(f'{filename} already transferred to S3!')
-
-                    # TESTING
-                    # st.write(response)
-                    # st.write(response.json())
-                    st.write(f"Dag_run_id: {response.json()['dag_run_id']}")
-
-                    dag_run_id = response.json()['dag_run_id']
-                    
-                    # response_transcript = convert_mp3_to_text_function(filename)
-                    # st.write("Transcript:", response_transcript)
-
-                    st.write('DAG Status Check (Checks every 30s):')
-                    # API to get DAG status, only proceed when you have a state = success
-                    # checks every 30 seconds if dag not failed or success
-                    starttime = time.time()
-                    while check_dag_status("audio_transcription") not in ('failed', 'success'):
-                        print("tick")
-                        time.sleep(30.0 - ((time.time() - starttime) % 30.0))
-
-                    if check_dag_status("audio_transcription") == 'success':
-                        # API Call to Airflow to get transcript from XCOM
-                        if '/' in filename:
-                            filename = filename.split('/')[-1]
+                    if not st.session_state.transcription_generated:
+                        # API Call to Airflow to execute process_audio_files_dag
                         data = {
-                                "dag_id": "audio_transcription",
-                                "dag_run_id": dag_run_id,
-                                "task_id": "process_audio_files",
-                                "xcom_key": filename
+                                "dag_run_id": "",
+                                "conf": {"filename": filename}
                                 }
+                        response = requests.post(url = 'http://airflow-airflow-webserver-1:8080/api/v1/dags/audio_transcription/dagRuns', json=data, auth=('airflow2','airflow2'))
+                        if response.status_code == 409:
+                            st.error(f'{filename} already transferred to S3!')
 
-                        url = f"http://localhost:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
-                        # TESTING
-                        # st.write(url, data)
+                        st.write(f"Dag_run_id: {response.json()}")
 
-                        response = requests.get(url=url, auth=('airflow2', 'airflow2'))
-                        st.write(response.json())
+                        dag_run_id = response.json()['dag_run_id']
+                        
+                        # response_transcript = convert_mp3_to_text_function(filename)
+                        # st.write("Transcript:", response_transcript)
 
-                        response_transcript = response.json()['value']
-                        st.write('Transcript:')
-                        st.json(response_transcript)
+                        st.write('DAG Status Check (Checks every 30s):')
 
-                        # API Call to Airflow to get answers from XCOM
-                        data = {
-                                "dag_id": "audio_transcription",
-                                "dag_run_id": dag_run_id,
-                                "task_id": "default_quessionaire",
-                                "xcom_key": "answers"
-                                }
+                        starttime = time.time()
+                        while check_dag_status("audio_transcription") not in ('failed', 'success'):
+                            st.write("tick")
+                            time.sleep(30.0 - ((time.time() - starttime) % 30.0))
 
-                        url = f"http://localhost:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
-                        # TESTING
-                        # st.write(url, data)
+                        if check_dag_status("audio_transcription") == 'success':
+                            if '/' in filename:
+                                filename = filename.split('/')[-1]
+                            data = {
+                                    "dag_id": "audio_transcription",
+                                    "dag_run_id": dag_run_id,
+                                    "task_id": "process_audio_files",
+                                    "xcom_key": filename
+                                    }
 
-                        response = requests.get(url = url, auth=('airflow2','airflow2'))
-                        # st.write(response.json())
+                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
-                        response_answers = response.json()['value']
-                        st.write('Answers:')
-                        st.json(response_answers)
+                            response = requests.get(url=url, auth=('airflow2', 'airflow2'))
+                            st.write(response.json())
+
+                            response_transcript = response.json()['value']
+                            st.session_state.transcript = response_transcript
+                            st.session_state.transcription_generated = True
+
+                            data = {
+                                    "dag_id": "audio_transcription",
+                                    "dag_run_id": dag_run_id,
+                                    "task_id": "default_quessionaire",
+                                    "xcom_key": "answers"
+                                    }
+
+                            url = f"http://airflow-airflow-webserver-1:8080/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
+
+                            response = requests.get(url = url, auth=('airflow2','airflow2'))
+
+                            response_answers = response.json()['value'].replace("'", '"')
+                            for i,(j,k) in enumerate(json.loads(response_answers).items()):
+                                st.write(f'# Q{i+1}: {j}')
+                                st.write(f'## A: {k}')
+
+                    if st.session_state.transcription_generated:
+                        st.write("### Custom Question")
+                        custom_question = st.text_input("What would you like to ask?")
+                        if custom_question != "":
+                            # Generate the answer using OpenAI's GPT-3
+                            answer = openai.Completion.create(
+                                engine="text-davinci-002",
+                                prompt=f"Q: {st.session_state.transcript + custom_question}\nA:",
+                                max_tokens=1024,
+                                n=1,
+                                stop=None,
+                                temperature=0.7,
+                            )
+
+                            # Print the answer
+                            st.write("### Answer")
+                            st.write(answer.choices[0].text.strip())
+
                     else:
                         st.error(f'Airflow DAG failed!')
 
 
                 else:
                     st.warning("Please upload a file or select an existing file from S3.")
+
 
 
 # Run the Streamlit app
