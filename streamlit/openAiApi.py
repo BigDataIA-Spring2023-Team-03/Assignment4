@@ -35,7 +35,7 @@ def OpenAiAPiCall(txt_file_key: str, question : str):
     print("\n Text in Processed_Audio: ",text) 
 
     # Set up OpenAI API client
-    openai.api_key = "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"
+    openai.api_key = open_api
 
     # Call OpenAI API to generate text
     prompt = f"{text}\nQ: {question}\nA:"
