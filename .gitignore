@@ -1,5 +1,6 @@
 .env
 airflow/.env
+__pycache__
 
 # venv
 openai_venv
