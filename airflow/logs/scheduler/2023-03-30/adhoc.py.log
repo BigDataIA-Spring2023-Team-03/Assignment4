@@ -397,3 +397,710 @@
 [2023-03-30T02:28:46.229+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:28:46.228+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2023-03-30T02:28:46.260+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:28:46.259+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
 [2023-03-30T02:28:46.432+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.630 seconds
+[2023-03-30T02:29:16.695+0000] {processor.py:153} INFO - Started process (PID=2750) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:16.696+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:29:16.697+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:16.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:17.285+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:17.325+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:17.325+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:29:17.506+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:17.505+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:29:17.542+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.855 seconds
+[2023-03-30T02:29:47.791+0000] {processor.py:153} INFO - Started process (PID=2803) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:47.795+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:29:47.796+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:47.795+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:48.452+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:29:48.507+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:48.506+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:29:48.718+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:29:48.718+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:29:48.760+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.973 seconds
+[2023-03-30T02:30:19.423+0000] {processor.py:153} INFO - Started process (PID=2858) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:19.426+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:30:19.431+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:19.430+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:20.815+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:21.002+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:21.001+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:30:21.082+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:21.082+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:30:21.162+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.758 seconds
+[2023-03-30T02:30:51.514+0000] {processor.py:153} INFO - Started process (PID=2902) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:51.516+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:30:51.517+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:51.517+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:52.405+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:30:52.473+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:52.472+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:30:52.533+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:30:52.533+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:30:52.582+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.078 seconds
+[2023-03-30T02:31:22.828+0000] {processor.py:153} INFO - Started process (PID=2946) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:22.830+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:31:22.832+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:22.831+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:23.639+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:23.712+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:23.712+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:31:23.773+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:23.773+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:31:23.827+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.005 seconds
+[2023-03-30T02:31:54.229+0000] {processor.py:153} INFO - Started process (PID=2991) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:54.231+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:31:54.233+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:54.233+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:54.931+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:31:54.993+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:54.993+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:31:55.066+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:31:55.065+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:31:55.313+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.091 seconds
+[2023-03-30T02:32:25.543+0000] {processor.py:153} INFO - Started process (PID=3035) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:25.545+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:32:25.547+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:25.547+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:26.036+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:26.077+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:26.077+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:32:26.273+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:26.272+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:32:26.305+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.769 seconds
+[2023-03-30T02:32:56.540+0000] {processor.py:153} INFO - Started process (PID=3079) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:56.558+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:32:56.559+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:56.559+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:57.069+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:32:57.132+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:57.131+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:32:57.392+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:32:57.392+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:32:57.447+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.910 seconds
+[2023-03-30T02:33:27.768+0000] {processor.py:153} INFO - Started process (PID=3124) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:27.772+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:33:27.773+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:27.773+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:28.163+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:28.207+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:28.206+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:33:28.237+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:28.236+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:33:28.266+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.502 seconds
+[2023-03-30T02:33:58.527+0000] {processor.py:153} INFO - Started process (PID=3169) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:58.530+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:33:58.534+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:58.531+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:59.317+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:33:59.376+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:59.375+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:33:59.428+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:33:59.428+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:33:59.479+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.959 seconds
+[2023-03-30T02:34:29.880+0000] {processor.py:153} INFO - Started process (PID=3220) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:34:29.886+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:34:29.891+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:34:29.891+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:34:32.380+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:34:32.576+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:34:32.574+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:34:32.695+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:34:32.695+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:34:32.772+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.913 seconds
+[2023-03-30T02:35:03.204+0000] {processor.py:153} INFO - Started process (PID=3257) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:03.207+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:35:03.209+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:03.209+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:04.431+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:04.538+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:04.534+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:35:04.631+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:04.631+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:35:05.029+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.840 seconds
+[2023-03-30T02:35:35.344+0000] {processor.py:153} INFO - Started process (PID=3302) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:35.346+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:35:35.347+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:35.347+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:36.087+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:35:36.153+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:36.153+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:35:36.393+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:35:36.393+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:35:36.444+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.110 seconds
+[2023-03-30T02:36:06.609+0000] {processor.py:153} INFO - Started process (PID=3346) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:06.611+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:36:06.612+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:06.612+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:07.196+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:07.258+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:07.258+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:36:07.535+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:07.535+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:36:07.571+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.965 seconds
+[2023-03-30T02:36:37.694+0000] {processor.py:153} INFO - Started process (PID=3390) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:37.696+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:36:37.697+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:37.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:38.467+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:36:38.527+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:38.526+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:36:38.774+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:36:38.774+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:36:38.815+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.128 seconds
+[2023-03-30T02:37:09.158+0000] {processor.py:153} INFO - Started process (PID=3435) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:09.159+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:37:09.161+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:09.160+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:09.945+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:10.046+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:10.045+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:37:10.108+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:10.108+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:37:10.201+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.052 seconds
+[2023-03-30T02:37:40.498+0000] {processor.py:153} INFO - Started process (PID=3479) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:40.502+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:37:40.504+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:40.503+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:41.758+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:37:41.837+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:41.833+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:37:41.903+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:37:41.902+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:37:41.963+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.477 seconds
+[2023-03-30T02:38:12.215+0000] {processor.py:153} INFO - Started process (PID=3522) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:12.219+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:38:12.219+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:12.219+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:12.685+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:12.744+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:12.742+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:38:12.803+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:12.802+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:38:13.028+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.818 seconds
+[2023-03-30T02:38:43.572+0000] {processor.py:153} INFO - Started process (PID=3566) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:43.578+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:38:43.579+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:43.579+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:44.883+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:38:44.989+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:44.988+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:38:45.598+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:38:45.597+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:38:45.757+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.193 seconds
+[2023-03-30T02:39:16.135+0000] {processor.py:153} INFO - Started process (PID=3609) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:16.141+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:39:16.143+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:16.142+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:16.604+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:16.655+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:16.654+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:39:16.904+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:16.904+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:39:16.955+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.822 seconds
+[2023-03-30T02:39:47.256+0000] {processor.py:153} INFO - Started process (PID=3653) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:47.257+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:39:47.258+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:47.257+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:48.036+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:39:48.288+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:48.287+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:39:48.400+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:39:48.399+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:39:48.520+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.271 seconds
+[2023-03-30T02:40:18.635+0000] {processor.py:153} INFO - Started process (PID=3698) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:18.649+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:40:18.650+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:18.650+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:19.156+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:19.204+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:19.204+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:40:19.243+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:19.243+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:40:19.282+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.652 seconds
+[2023-03-30T02:40:49.380+0000] {processor.py:153} INFO - Started process (PID=3743) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:49.383+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:40:49.384+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:49.384+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:49.819+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:40:49.874+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:49.874+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:40:49.914+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:40:49.914+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:40:49.957+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.581 seconds
+[2023-03-30T02:41:20.246+0000] {processor.py:153} INFO - Started process (PID=3787) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:20.248+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:41:20.249+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:20.249+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:21.340+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:21.437+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:21.433+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:41:21.513+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:21.512+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:41:21.870+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.630 seconds
+[2023-03-30T02:41:52.196+0000] {processor.py:153} INFO - Started process (PID=3831) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:52.199+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:41:52.203+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:52.202+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:53.007+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:41:53.088+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:53.087+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:41:53.518+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:41:53.517+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:41:53.582+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.394 seconds
+[2023-03-30T02:42:23.692+0000] {processor.py:153} INFO - Started process (PID=3876) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:23.696+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:42:23.697+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:23.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:24.682+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:24.787+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:24.786+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:42:25.077+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:25.077+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:42:25.136+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.450 seconds
+[2023-03-30T02:42:56.114+0000] {processor.py:153} INFO - Started process (PID=3920) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:56.119+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:42:56.121+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:56.120+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:56.846+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:42:56.896+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:56.895+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:42:57.175+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:42:57.175+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:42:57.240+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.135 seconds
+[2023-03-30T02:43:27.556+0000] {processor.py:153} INFO - Started process (PID=3964) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:27.559+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:43:27.560+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:27.560+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:28.315+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:28.667+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:28.666+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:43:28.714+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:28.714+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:43:28.766+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.217 seconds
+[2023-03-30T02:43:58.849+0000] {processor.py:153} INFO - Started process (PID=4009) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:58.849+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:43:58.850+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:58.850+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:59.360+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:43:59.413+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:59.412+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:43:59.455+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:43:59.455+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:43:59.499+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.656 seconds
+[2023-03-30T02:44:29.549+0000] {processor.py:153} INFO - Started process (PID=4053) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:44:29.553+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:44:29.554+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:44:29.554+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:44:29.984+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:44:30.027+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:44:30.027+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:44:30.066+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:44:30.066+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:44:30.113+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.568 seconds
+[2023-03-30T02:45:00.871+0000] {processor.py:153} INFO - Started process (PID=4097) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:00.877+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:45:00.879+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:00.879+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:02.069+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:02.143+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:02.142+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:45:02.578+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:02.578+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:45:02.673+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.820 seconds
+[2023-03-30T02:45:32.924+0000] {processor.py:153} INFO - Started process (PID=4141) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:32.925+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:45:32.925+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:32.925+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:33.397+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:45:33.445+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:33.445+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:45:33.697+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:45:33.697+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:45:33.735+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.819 seconds
+[2023-03-30T02:46:03.907+0000] {processor.py:153} INFO - Started process (PID=4185) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:03.910+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:46:03.912+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:03.911+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:05.582+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:05.727+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:05.726+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:46:06.452+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:06.452+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:46:06.561+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.655 seconds
+[2023-03-30T02:46:36.979+0000] {processor.py:153} INFO - Started process (PID=4218) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:36.986+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:46:36.988+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:36.988+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:38.151+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:46:38.302+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:38.301+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:46:38.396+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:46:38.392+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:46:38.500+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.531 seconds
+[2023-03-30T02:47:08.813+0000] {processor.py:153} INFO - Started process (PID=4259) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:08.816+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:47:08.819+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:08.818+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:11.268+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:11.577+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:11.576+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:47:11.735+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:11.734+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:47:11.817+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 3.039 seconds
+[2023-03-30T02:47:42.422+0000] {processor.py:153} INFO - Started process (PID=4300) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:42.423+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:47:42.432+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:42.430+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:43.372+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:47:43.440+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:43.440+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:47:43.491+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:47:43.491+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:47:43.782+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.373 seconds
+[2023-03-30T02:48:14.106+0000] {processor.py:153} INFO - Started process (PID=4344) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:14.108+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:48:14.109+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:14.108+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:14.623+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:14.674+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:14.673+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:48:14.926+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:14.926+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:48:14.966+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.863 seconds
+[2023-03-30T02:48:45.720+0000] {processor.py:153} INFO - Started process (PID=4377) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:45.723+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:48:45.724+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:45.724+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:46.942+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:48:47.089+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:47.088+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:48:47.584+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:48:47.583+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:48:47.689+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.981 seconds
+[2023-03-30T02:49:18.352+0000] {processor.py:153} INFO - Started process (PID=4428) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:18.354+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:49:18.355+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:18.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:19.502+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:20.035+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:20.034+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:49:20.173+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:20.173+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:49:20.269+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.925 seconds
+[2023-03-30T02:49:50.932+0000] {processor.py:153} INFO - Started process (PID=4473) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:50.935+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:49:50.940+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:50.940+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:51.931+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:49:52.005+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:52.004+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:49:52.103+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:49:52.102+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:49:52.182+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.261 seconds
+[2023-03-30T02:50:22.565+0000] {processor.py:153} INFO - Started process (PID=4517) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:22.567+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:50:22.573+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:22.569+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:23.576+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:23.658+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:23.657+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:50:23.716+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:23.716+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:50:23.776+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.223 seconds
+[2023-03-30T02:50:54.213+0000] {processor.py:153} INFO - Started process (PID=4552) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:54.219+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:50:54.229+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:54.223+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:55.827+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:50:56.008+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:56.003+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:50:56.192+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:50:56.191+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:50:56.621+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.424 seconds
+[2023-03-30T02:51:26.989+0000] {processor.py:153} INFO - Started process (PID=4587) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:26.994+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:51:26.995+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:26.995+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:27.788+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:27.856+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:27.856+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:51:28.119+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:28.118+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:51:28.176+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.193 seconds
+[2023-03-30T02:51:58.473+0000] {processor.py:153} INFO - Started process (PID=4631) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:58.474+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:51:58.475+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:58.475+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:59.499+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:51:59.580+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:59.579+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:51:59.932+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:51:59.932+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:51:59.995+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.532 seconds
+[2023-03-30T02:52:30.348+0000] {processor.py:153} INFO - Started process (PID=4675) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:52:30.353+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:52:30.354+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:52:30.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:52:31.215+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:52:31.499+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:52:31.498+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:52:31.549+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:52:31.549+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:52:31.596+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.252 seconds
+[2023-03-30T02:53:01.880+0000] {processor.py:153} INFO - Started process (PID=4720) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:01.881+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:53:01.881+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:01.881+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:02.480+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:02.533+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:02.533+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:53:02.588+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:02.588+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:53:02.629+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.756 seconds
+[2023-03-30T02:53:32.857+0000] {processor.py:153} INFO - Started process (PID=4765) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:32.859+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:53:32.861+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:32.860+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:33.925+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:53:34.079+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:34.078+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:53:34.160+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:53:34.160+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:53:34.256+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.410 seconds
+[2023-03-30T02:54:04.708+0000] {processor.py:153} INFO - Started process (PID=4809) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:04.713+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:54:04.714+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:04.714+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:05.287+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:05.344+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:05.344+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:54:05.394+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:05.394+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:54:05.756+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.052 seconds
+[2023-03-30T02:54:36.090+0000] {processor.py:153} INFO - Started process (PID=4853) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:36.091+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:54:36.092+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:36.092+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:36.821+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:54:36.882+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:36.881+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:54:37.129+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:54:37.129+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:54:37.172+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.090 seconds
+[2023-03-30T02:55:07.584+0000] {processor.py:153} INFO - Started process (PID=4886) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:07.594+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:55:07.597+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:07.596+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:09.845+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:10.146+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:10.143+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:55:10.792+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:10.791+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:55:10.897+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 3.335 seconds
+[2023-03-30T02:55:41.304+0000] {processor.py:153} INFO - Started process (PID=4921) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:41.321+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:55:41.322+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:41.322+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:43.803+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:55:44.643+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:44.639+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:55:44.834+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:55:44.834+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:55:44.961+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 3.667 seconds
+[2023-03-30T02:56:15.349+0000] {processor.py:153} INFO - Started process (PID=4965) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:15.354+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:56:15.354+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:15.354+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:16.074+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:16.333+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:16.329+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:56:16.368+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:16.368+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:56:16.408+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.063 seconds
+[2023-03-30T02:56:46.562+0000] {processor.py:153} INFO - Started process (PID=5011) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:46.563+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:56:46.564+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:46.564+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:47.243+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:56:47.311+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:47.311+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:56:47.363+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:56:47.363+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:56:47.414+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.855 seconds
+[2023-03-30T02:57:17.819+0000] {processor.py:153} INFO - Started process (PID=5055) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:17.834+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:57:17.836+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:17.835+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:20.969+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:21.255+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:21.250+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:57:21.479+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:21.479+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:57:22.206+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 4.400 seconds
+[2023-03-30T02:57:52.794+0000] {processor.py:153} INFO - Started process (PID=5099) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:52.797+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:57:52.801+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:52.801+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:53.773+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:57:53.911+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:53.907+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:57:54.354+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:57:54.354+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:57:54.433+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.647 seconds
+[2023-03-30T02:58:24.830+0000] {processor.py:153} INFO - Started process (PID=5132) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:58:24.845+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:58:24.858+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:58:24.857+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:58:27.779+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:58:28.028+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:58:28.027+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:58:28.768+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:58:28.757+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:58:28.937+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 4.122 seconds
+[2023-03-30T02:58:59.103+0000] {processor.py:153} INFO - Started process (PID=5177) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:58:59.104+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:58:59.105+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:58:59.105+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:59:00.284+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:59:00.755+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:59:00.754+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:59:00.852+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:59:00.852+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:59:00.929+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.836 seconds
+[2023-03-30T02:59:31.326+0000] {processor.py:153} INFO - Started process (PID=5220) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T02:59:31.328+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T02:59:31.334+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:59:31.333+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:59:33.004+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T02:59:33.728+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:59:33.727+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T02:59:33.889+0000] {logging_mixin.py:137} INFO - [2023-03-30T02:59:33.888+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T02:59:34.015+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.706 seconds
+[2023-03-30T03:00:04.416+0000] {processor.py:153} INFO - Started process (PID=5256) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:04.422+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:00:04.429+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:04.428+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:05.090+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:05.166+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:05.165+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:00:05.221+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:05.220+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:00:05.288+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.871 seconds
+[2023-03-30T03:00:36.067+0000] {processor.py:153} INFO - Started process (PID=5301) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:36.071+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:00:36.072+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:36.072+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:37.064+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:00:37.197+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:37.196+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:00:37.294+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:00:37.293+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:00:37.712+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.649 seconds
+[2023-03-30T03:01:08.121+0000] {processor.py:153} INFO - Started process (PID=5346) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:08.122+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:01:08.126+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:08.125+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:08.786+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:08.856+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:08.856+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:01:09.128+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:09.128+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:01:09.170+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.061 seconds
+[2023-03-30T03:01:39.521+0000] {processor.py:153} INFO - Started process (PID=5390) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:39.524+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:01:39.526+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:39.525+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:41.452+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:01:41.596+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:41.595+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:01:42.163+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:01:42.162+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:01:42.251+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.745 seconds
+[2023-03-30T03:02:13.219+0000] {processor.py:153} INFO - Started process (PID=5434) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:13.227+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:02:13.230+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:13.229+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:14.107+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:14.437+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:14.436+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:02:14.487+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:14.487+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:02:14.544+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.338 seconds
+[2023-03-30T03:02:44.692+0000] {processor.py:153} INFO - Started process (PID=5468) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:44.693+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:02:44.694+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:44.694+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:46.216+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:02:46.642+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:46.641+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:02:46.733+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:02:46.733+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:02:46.854+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.173 seconds
+[2023-03-30T03:03:17.200+0000] {processor.py:153} INFO - Started process (PID=5503) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:17.206+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:03:17.216+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:17.215+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:18.557+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:18.696+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:18.695+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:03:18.855+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:18.851+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:03:18.955+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.764 seconds
+[2023-03-30T03:03:49.300+0000] {processor.py:153} INFO - Started process (PID=5547) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:49.302+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:03:49.303+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:49.303+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:49.853+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:03:49.927+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:49.926+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:03:49.981+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:03:49.981+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:03:50.222+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.928 seconds
+[2023-03-30T03:04:20.460+0000] {processor.py:153} INFO - Started process (PID=5591) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:20.463+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:04:20.468+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:20.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:21.231+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:21.287+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:21.283+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:04:21.563+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:21.563+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:04:21.617+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.166 seconds
+[2023-03-30T03:04:51.838+0000] {processor.py:153} INFO - Started process (PID=5623) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:51.845+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:04:51.849+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:51.848+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:53.136+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:04:53.249+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:53.248+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:04:53.624+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:04:53.621+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:04:53.699+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.872 seconds
+[2023-03-30T03:05:24.509+0000] {processor.py:153} INFO - Started process (PID=5667) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:24.511+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:05:24.512+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:24.512+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:25.371+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:25.779+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:25.778+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:05:25.860+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:25.860+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:05:25.921+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.420 seconds
+[2023-03-30T03:05:56.484+0000] {processor.py:153} INFO - Started process (PID=5702) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:56.494+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:05:56.496+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:56.495+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:57.422+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:05:57.508+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:57.507+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:05:57.593+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:05:57.593+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:05:57.658+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.183 seconds
+[2023-03-30T03:06:27.961+0000] {processor.py:153} INFO - Started process (PID=5746) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:06:27.962+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:06:27.963+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:06:27.963+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:06:28.548+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:06:28.613+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:06:28.612+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:06:28.663+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:06:28.663+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:06:28.729+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.772 seconds
+[2023-03-30T03:06:59.225+0000] {processor.py:153} INFO - Started process (PID=5790) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:06:59.231+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:06:59.233+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:06:59.232+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:07:01.453+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:07:01.592+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:07:01.587+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:07:02.184+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:07:02.184+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:07:02.302+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 3.086 seconds
+[2023-03-30T03:07:32.849+0000] {processor.py:153} INFO - Started process (PID=5835) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:07:32.851+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:07:32.853+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:07:32.853+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:07:33.719+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:07:33.792+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:07:33.791+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:07:34.080+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:07:34.080+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:07:34.129+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.287 seconds
+[2023-03-30T03:08:04.207+0000] {processor.py:153} INFO - Started process (PID=5879) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:04.208+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:08:04.214+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:04.214+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:05.237+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:05.370+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:05.369+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:08:05.752+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:05.752+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:08:05.827+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.625 seconds
+[2023-03-30T03:08:36.304+0000] {processor.py:153} INFO - Started process (PID=5909) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:36.306+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:08:36.318+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:36.317+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:38.646+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:08:39.057+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:39.056+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:08:39.183+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:08:39.183+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:08:39.304+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 3.037 seconds
+[2023-03-30T03:09:09.622+0000] {processor.py:153} INFO - Started process (PID=5967) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:09.628+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:09:09.628+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:09.628+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:10.501+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:10.598+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:10.597+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:09:10.669+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:10.669+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:09:10.727+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.114 seconds
+[2023-03-30T03:09:41.144+0000] {processor.py:153} INFO - Started process (PID=5998) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:41.146+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:09:41.151+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:41.151+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:41.793+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:09:41.873+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:41.873+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:09:41.933+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:09:41.933+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:09:42.001+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.862 seconds
+[2023-03-30T03:10:12.311+0000] {processor.py:153} INFO - Started process (PID=6044) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:12.312+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:10:12.313+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:12.313+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:13.299+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:13.388+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:13.387+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:10:13.708+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:13.708+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:10:13.778+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.478 seconds
+[2023-03-30T03:10:44.273+0000] {processor.py:153} INFO - Started process (PID=6087) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:44.284+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:10:44.286+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:44.285+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:46.567+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:10:46.704+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:46.703+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:10:47.124+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:10:47.124+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:10:47.186+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 2.935 seconds
+[2023-03-30T03:11:17.650+0000] {processor.py:153} INFO - Started process (PID=6142) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:17.652+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:11:17.653+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:17.653+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:18.310+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:18.378+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:18.377+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:11:18.672+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:18.672+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:11:18.723+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.080 seconds
+[2023-03-30T03:11:49.033+0000] {processor.py:153} INFO - Started process (PID=6186) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:49.035+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:11:49.036+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:49.036+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:49.956+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:11:50.344+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:50.343+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:11:50.425+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:11:50.424+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:11:50.498+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.476 seconds
+[2023-03-30T03:12:20.819+0000] {processor.py:153} INFO - Started process (PID=6230) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:20.820+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:12:20.821+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:20.821+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:21.599+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:21.660+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:21.659+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:12:21.711+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:21.711+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:12:21.763+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.950 seconds
+[2023-03-30T03:12:52.022+0000] {processor.py:153} INFO - Started process (PID=6274) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:52.024+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:12:52.025+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:52.024+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:52.825+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:12:52.898+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:52.897+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:12:52.964+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:12:52.963+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:12:53.013+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.007 seconds
+[2023-03-30T03:13:23.299+0000] {processor.py:153} INFO - Started process (PID=6319) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:23.303+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:13:23.304+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:23.303+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:23.958+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:24.020+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:24.019+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:13:24.273+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:24.272+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:13:24.333+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.041 seconds
+[2023-03-30T03:13:54.672+0000] {processor.py:153} INFO - Started process (PID=6363) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:54.681+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:13:54.683+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:54.683+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:55.646+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:13:55.731+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:55.727+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:13:56.026+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:13:56.026+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:13:56.074+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.412 seconds
+[2023-03-30T03:14:26.422+0000] {processor.py:153} INFO - Started process (PID=6407) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:26.427+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:14:26.428+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:26.428+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:27.761+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:27.861+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:27.860+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:14:28.191+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:28.190+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:14:28.249+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.836 seconds
+[2023-03-30T03:14:58.587+0000] {processor.py:153} INFO - Started process (PID=6451) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:58.587+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:14:58.588+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:58.588+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:59.316+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:14:59.613+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:59.612+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:14:59.713+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:14:59.713+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:14:59.777+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.194 seconds
+[2023-03-30T03:15:30.048+0000] {processor.py:153} INFO - Started process (PID=6495) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:15:30.065+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:15:30.067+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:15:30.066+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:15:31.271+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:15:31.346+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:15:31.345+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:15:31.409+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:15:31.409+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:15:31.477+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.437 seconds
+[2023-03-30T03:16:01.786+0000] {processor.py:153} INFO - Started process (PID=6539) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:01.786+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:16:01.787+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:01.787+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:02.392+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:02.446+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:02.446+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:16:02.496+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:02.496+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:16:02.537+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.755 seconds
+[2023-03-30T03:16:32.798+0000] {processor.py:153} INFO - Started process (PID=6584) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:32.812+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:16:32.813+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:32.813+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:33.366+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:16:33.423+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:33.422+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:16:33.708+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:16:33.708+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:16:33.767+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.976 seconds
+[2023-03-30T03:17:03.891+0000] {processor.py:153} INFO - Started process (PID=6628) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:03.891+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:17:03.892+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:03.892+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:04.445+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:04.506+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:04.505+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:17:04.767+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:04.767+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:17:04.803+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.913 seconds
+[2023-03-30T03:17:35.095+0000] {processor.py:153} INFO - Started process (PID=6671) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:35.096+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:17:35.097+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:35.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:35.877+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:17:35.957+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:35.957+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:17:36.216+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:17:36.215+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:17:36.264+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.177 seconds
+[2023-03-30T03:18:06.577+0000] {processor.py:153} INFO - Started process (PID=6715) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:06.579+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:18:06.580+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:06.580+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:07.411+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:07.750+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:07.749+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:18:07.799+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:07.799+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:18:07.850+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.287 seconds
+[2023-03-30T03:18:38.118+0000] {processor.py:153} INFO - Started process (PID=6759) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:38.119+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:18:38.119+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:38.119+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:38.839+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:18:38.894+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:38.894+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:18:38.937+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:18:38.937+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:18:38.978+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.863 seconds
+[2023-03-30T03:19:09.208+0000] {processor.py:153} INFO - Started process (PID=6810) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:09.210+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:19:09.211+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:09.211+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:10.043+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:10.140+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:10.139+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:19:10.213+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:10.213+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:19:10.288+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.090 seconds
+[2023-03-30T03:19:40.504+0000] {processor.py:153} INFO - Started process (PID=6856) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:40.506+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:19:40.508+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:40.508+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:41.293+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:19:41.352+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:41.352+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:19:41.607+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:19:41.606+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:19:41.648+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.151 seconds
+[2023-03-30T03:20:11.853+0000] {processor.py:153} INFO - Started process (PID=6912) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:11.857+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:20:11.858+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:11.858+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:12.412+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:12.463+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:12.463+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:20:12.699+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:12.699+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:20:12.757+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.908 seconds
+[2023-03-30T03:20:43.204+0000] {processor.py:153} INFO - Started process (PID=6956) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:43.205+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:20:43.205+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:43.205+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:43.702+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:20:43.762+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:43.758+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:20:44.035+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:20:44.034+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:20:44.092+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 0.892 seconds
+[2023-03-30T03:21:14.642+0000] {processor.py:153} INFO - Started process (PID=7001) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:14.643+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:21:14.648+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:14.647+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:15.299+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:15.620+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:15.619+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:21:15.699+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:15.699+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:21:15.761+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.122 seconds
+[2023-03-30T03:21:46.096+0000] {processor.py:153} INFO - Started process (PID=7044) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:46.097+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:21:46.099+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:46.098+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:47.296+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:21:47.404+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:47.403+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:21:47.484+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:21:47.483+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:21:47.577+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.492 seconds
+[2023-03-30T03:22:17.872+0000] {processor.py:153} INFO - Started process (PID=7088) to work on /opt/airflow/dags/adhoc.py
+[2023-03-30T03:22:17.873+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/adhoc.py for tasks to queue
+[2023-03-30T03:22:17.873+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:22:17.873+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:22:18.623+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription']) retrieved from /opt/airflow/dags/adhoc.py
+[2023-03-30T03:22:18.724+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:22:18.723+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-30T03:22:18.821+0000] {logging_mixin.py:137} INFO - [2023-03-30T03:22:18.821+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription to 2023-03-30T00:00:00+00:00, run_after=2023-03-31T00:00:00+00:00
+[2023-03-30T03:22:18.892+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/adhoc.py took 1.031 seconds

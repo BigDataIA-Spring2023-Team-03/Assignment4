@@ -1,0 +1,25 @@
+[2023-03-30T02:47:34.920+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_answers manual__2023-03-30T02:47:07.493818+00:00 [queued]>
+[2023-03-30T02:47:34.963+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription.push_answers manual__2023-03-30T02:47:07.493818+00:00 [queued]>
+[2023-03-30T02:47:34.963+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T02:47:34.967+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 2
+[2023-03-30T02:47:34.968+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-03-30T02:47:35.038+0000] {taskinstance.py:1300} INFO - Executing <Task(PythonOperator): push_answers> on 2023-03-30 02:47:07.493818+00:00
+[2023-03-30T02:47:35.053+0000] {standard_task_runner.py:55} INFO - Started process 4119 to run task
+[2023-03-30T02:47:35.067+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'audio_transcription', 'push_answers', 'manual__2023-03-30T02:47:07.493818+00:00', '--job-id', '354', '--raw', '--subdir', 'DAGS_FOLDER/adhoc.py', '--cfg-path', '/tmp/tmpziufdaba']
+[2023-03-30T02:47:35.082+0000] {standard_task_runner.py:83} INFO - Job 354: Subtask push_answers
+[2023-03-30T02:47:35.541+0000] {task_command.py:388} INFO - Running <TaskInstance: audio_transcription.push_answers manual__2023-03-30T02:47:07.493818+00:00 [running]> on host f6c753b92a52
+[2023-03-30T02:47:35.990+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=audio_transcription
+AIRFLOW_CTX_TASK_ID=push_answers
+AIRFLOW_CTX_EXECUTION_DATE=2023-03-30T02:47:07.493818+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-03-30T02:47:07.493818+00:00
+[2023-03-30T02:47:36.740+0000] {logging_mixin.py:137} INFO - JV_AUDIO_EXAMPLE_answers.json
+[2023-03-30T02:47:36.740+0000] {logging_mixin.py:137} INFO - {'Summarize the topic of following text in three words or less:': 'Testing chatbot technology.', 'How many people might be involved in the audio?': 'As an AI language model, I do not have access to information about the audio that you might be referring to. Can you please provide more context or details about the audio so that I can provide a better answer?', 'What are the names of the people in the audio?': 'The only name mentioned in the audio is Jared Witelewski.'}
+[2023-03-30T02:47:37.100+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-03-30T02:47:37.142+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=audio_transcription, task_id=push_answers, execution_date=20230330T024707, start_date=20230330T024734, end_date=20230330T024737
+[2023-03-30T02:47:37.290+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-03-30T02:47:37.402+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
