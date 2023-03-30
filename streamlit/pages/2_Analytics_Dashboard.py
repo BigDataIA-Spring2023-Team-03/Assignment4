@@ -58,20 +58,36 @@ if password != '':
     
         # ######################################################################################################
         # TODO: 100 MOST RECENT EVENTS, WILL NEED TO LOOP THROUGH
-        url = f"http://{webserver}/api/v1/eventLogs?limit=1000&order_by=-when"
+
+        url = f"http://{webserver}/api/v1/eventLogs?limit=1"
 
         response = requests.get(url=url, auth=('airflow2', 'airflow2'))
 
         data = response.json()
-        event_df = pd.json_normalize(data, record_path =['event_logs'])
-        st.write(f'Total Events: {event_df.shape[0]}')
+        total_airflow_events = data['total_entries']
+        st.write(f"Total Events from Airflow: {total_airflow_events}")
+
+        # total_airflow_events = 1980
+        data = []
+        for i in range(0, int(total_airflow_events/100) + 1):
+            url = f"http://{webserver}/api/v1/eventLogs?offset={i*100}"
+            print(url)
+            response = requests.get(url=url, auth=('airflow2', 'airflow2'))
+            data += response.json()['event_logs']
+       
+        # event_df = pd.json_normalize(data, record_path =['event_logs'])
+        event_df = pd.json_normalize(data)
         st.write(event_df)
 
         # User Requests Over Time
         st.header('Requests Over Time')
         summary = event_df.loc[(event_df['dag_id'].isin(['audio_transcription', 'audio_transcription_batch'])) & (event_df['event'].isin(['failed', 'success'])),
                     ['dag_id','event','execution_date']]
+        # summary['execution_date'].dt.date
         st.write(summary.drop_duplicates())
+
+        counts = summary.drop_duplicates().groupby(['dag_id','event','execution_date']).size().reset_index(name='counts')
+        st.write(counts)
 
         # fig = plt.figure(figsize=(10, 4))
         # sns.lineplot(x='date', y='total_requests', hue='email', 
