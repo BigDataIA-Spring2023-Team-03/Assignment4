@@ -7,6 +7,7 @@ import time
 from main import check_dag_status
 import json
 import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
 from datetime import datetime, timedelta
 from decouple import config
@@ -59,52 +60,71 @@ if password != '':
             response = requests.get(url=url, auth=('airflow2', 'airflow2'))
             if response.status_code == 200:
                 data += response.json()['event_logs']
+            # res = response.json()['event_logs']
+            # st.write(res)
+            # data.append(res)
        
         # event_df = pd.json_normalize(data, record_path =['event_logs'])
         event_df = pd.json_normalize(data)
-        st.write(event_df)
+        # TESTING
+        st.subheader('Raw Airflow Event Data')
+        st.write(event_df.sort_values(by='when', ascending=False).head(10))
 
+
+        # ######################################################################################################
+        # # Total Requests Over Time
+        # Number of Transcription Over Time
         # User Requests Over Time
         st.header('Requests Over Time')
         summary = event_df.loc[(event_df['dag_id'].isin(['audio_transcription', 'audio_transcription_batch'])) & (event_df['event'].isin(['failed', 'success'])),
                     ['dag_id','event','execution_date']]
         # summary['execution_date'].dt.date
-        st.write(summary.drop_duplicates())
+        # st.write(summary.drop_duplicates())
 
-        counts = summary.drop_duplicates().groupby(['dag_id','event','execution_date']).size().reset_index(name='counts')
-        st.write(counts)
+        summary['execution_date'] = pd.to_datetime(summary['execution_date']).dt.date
 
-        # fig = plt.figure(figsize=(10, 4))
-        # sns.lineplot(x='date', y='total_requests', hue='email', 
-        #             data=df,
-        #             markers=True).set(ylim=(0))
-        # st.pyplot(fig)
+        counts = summary.groupby(['dag_id','execution_date']).size().reset_index(name='total_requests')
+        st.write(counts.sort_values(by='execution_date', ascending=False))
 
+        fig = plt.figure(figsize=(10, 4))
+        sns.lineplot(x='execution_date', y='total_requests', hue='dag_id',
+                    data=counts,
+                    markers=True).set(ylim=(0))
+        st.pyplot(fig)
+
+        # st.stop()
 
         # ######################################################################################################
-        # # Total Requests Over Time
-        # # TODO: turn into bar graph where you can see the breakdown of success/failure request status
-        # st.header('Usage Over Time')
+        # Comparison of Success vs. Failure
+        # Selecting columns needed for analytics
+        selected_columns = ['dag_id', 'event', 'execution_date']
+        data = event_df[selected_columns]
 
-        # query = f"""
-        # select date(time_of_request) date, 
-        #         count(distinct email) total_users,
-        #         count(*) total_requests
-        # from user_api 
-        # group by date
-        # """
-        # df = pd.read_sql_query(query, conn)
-        # # TESTING
-        # # st.write(df.head())
-        # # st.write(df.dtypes)
+        # Remove leading and trailing white spaces from all string columns
+        data = data.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
-        # fig = plt.figure(figsize=(10, 4))
-        # g = sns.lineplot(x=df.date, y=df.total_requests, color="g")
-        # sns.lineplot(x=df.date, y=df.total_users, color="b", ax=g.axes.twinx())
-        # g.legend(handles=[Line2D([], [], marker='_', color="g", label='total_requests'), 
-        #                 Line2D([], [], marker='_', color="b", label='total_users')])
+        # Filter Data as per requirements
+        filtered_data = data[(data["dag_id"]=='audio_transcription') | (data["dag_id"]=='audio_transcription_batch')]
+        filtered_data = filtered_data[(filtered_data["event"]=='failed') | (filtered_data["event"]=='success')]
 
-        # st.pyplot(fig)
+        st.title("Transcription Result Analysis")
+
+        st.subheader("Raw Transcription Data")
+        st.write(filtered_data.sort_values(by='execution_date', ascending=False))
+
+        # Comparison of Success and Failed File Transcription
+        counts = filtered_data["event"].value_counts()
+        fig, ax = plt.subplots()
+        data = counts
+        labels = ['Success', 'Failure']
+        colors = ['#00FF10', '#FF0000']
+        _, _, autotexts = ax.pie(data, labels=labels, colors=colors, autopct='%1.1f%%')
+
+        st.subheader('Comparison of Success and Failed File Transcription')
+        st.pyplot(fig)
+
+        st.subheader('Count of Success v/s Failed Transcription')
+        st.write(counts)
 
 
         #############################################################################
