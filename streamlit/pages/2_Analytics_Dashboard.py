@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 from decouple import config
 
 # DEV or PROD
-environment = 'PROD'
+environment = 'DEV'
 if environment == 'DEV':
     webserver = 'localhost:8080'
 elif environment == 'PROD':
@@ -57,9 +57,10 @@ if password != '':
             url = f"http://{webserver}/api/v1/eventLogs?offset={i*100}"
             print(url)
             response = requests.get(url=url, auth=('airflow2', 'airflow2'))
-            res = response.json()['event_logs']
+            data += response.json()['event_logs']
+            # res = response.json()['event_logs']
             # st.write(res)
-            data.append(res)
+            # data.append(res)
        
         # event_df = pd.json_normalize(data, record_path =['event_logs'])
         event_df = pd.json_normalize(data)
