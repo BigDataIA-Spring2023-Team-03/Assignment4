@@ -1,3 +1,5 @@
+# Architecture
+![Architecture_Diagram_Assignment-4](https://user-images.githubusercontent.com/91744801/229030775-b0c05be1-c479-4f11-b11a-d33c90c612dc.png)
 # Local System Setup
 
 ## For Windows Users
