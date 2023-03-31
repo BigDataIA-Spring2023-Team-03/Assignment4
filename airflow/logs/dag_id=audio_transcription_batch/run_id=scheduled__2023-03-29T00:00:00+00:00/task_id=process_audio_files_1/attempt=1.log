@@ -21,3 +21,4 @@ AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-03-29T00:00:00+00:00
 [2023-03-30T01:59:52.106+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=audio_transcription_batch, task_id=process_audio_files_1, execution_date=20230329T000000, start_date=20230330T015942, end_date=20230330T015952
 [2023-03-30T01:59:52.192+0000] {local_task_job.py:208} INFO - Task exited with return code 0
 [2023-03-30T01:59:52.288+0000] {taskinstance.py:2578} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-03-31T04:18:53.156+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: audio_transcription_batch.process_audio_files_1 scheduled__2023-03-29T00:00:00+00:00 [queued]>

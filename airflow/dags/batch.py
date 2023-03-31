@@ -41,7 +41,8 @@ def transcribe_audio_file(bucket_name, key):
     audio_file = io.BytesIO(audio_data)
     audio_file.name = key
     transcription = openai.Audio.transcribe("whisper-1", audio_file)
-
+    transcription['text'] = transcription['text'].replace("'", "")
+    transcription['text'] = transcription['text'].replace('"', "")
     return transcription
 
 def process_audio_files(ti, **kwargs):
@@ -89,6 +90,8 @@ def default_quessionaire(ti, **kwargs):
         )
 
         chat_output = completion.choices[0].message.content.strip()
+        chat_output = chat_output.replace("'", "")
+        chat_output = chat_output.replace("'", "")
         default_questions_answers[j] = chat_output
         ti.xcom_push(key="answers", value=default_questions_answers)
 
