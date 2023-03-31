@@ -67,6 +67,7 @@ def check_dag_status(dag_id):
 def main():
     # Set the title of the app
     st.title("MP3 Uploader and Transcription")
+    st.write('File must be in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.')
 
     dag_id = "audio_transcription"
     dag_status = check_dag_status(dag_id)
@@ -80,10 +81,13 @@ def main():
         # Create a file uploader
         uploaded_file = st.file_uploader("Upload an MP3 file")
 
-        # Create a dropdown to select an existing file from the S3 bucket
-        s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')
-        s3_files = [obj["Key"] for obj in s3_objects.get("Contents", []) if not obj['Key'] == 'raw/']
-        selected_file = st.selectbox("Select an existing file from S3", ["None"] + s3_files)
+    # Create a dropdown to select an existing file from the S3 bucket
+    s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')
+    s3_files = [obj["Key"] for obj in s3_objects.get("Contents", []) if not obj['Key'] == 'raw/']
+    # Get Necessary file
+    s3_files = [file.split('/')[1] for file in s3_files if file[-1] != '/' and file.split('.')[1] in ('wav', 'mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'webm')]
+
+    selected_file = st.selectbox("Select an existing file from S3", ["None"] + s3_files)
 
         # Check if both an uploaded file and an S3 file were selected
         if uploaded_file and selected_file != "None":
@@ -91,6 +95,9 @@ def main():
         else:
             # Check if an uploaded file was selected
             if uploaded_file is not None:
+                if uploaded_file.name.split('.')[1] not in ('wav', 'mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'webm'):
+                    st.error(f'Incorrect File Format!')
+                    st.stop()
                 # Get the file name and size
                 filename = uploaded_file.name
                 if not filename == st.session_state.file_name:
@@ -159,9 +166,11 @@ def main():
                             if response.status_code == 409:
                                 st.error(f'{filename} already transferred to S3!')
 
-                            # st.write(f"Dag_run_id: {response.json()}")
-
                             dag_run_id = response.json()['dag_run_id']
+                            st.write(f"Dag_run_id: {dag_run_id}")
+                        
+                        # response_transcript = convert_mp3_to_text_function(filename)
+                        # st.write("Transcript:", response_transcript)
 
                             starttime = time.time()
                             while check_dag_status("audio_transcription") not in ('failed', 'success'):
@@ -183,6 +192,7 @@ def main():
                                 url = f"http://{webserver}/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                                 response = requests.get(url=url, auth=('airflow2', 'airflow2'))
+                            # st.write(response.json())
 
                                 response_transcript = response.json()['value']
                                 st.session_state.transcript = response_transcript
@@ -198,8 +208,7 @@ def main():
                                 url = f"http://{webserver}/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                                 response = requests.get(url = url, auth=('airflow2','airflow2'))
-                                st.write(type(response.json()['value']))
-                                st.write(response.json()['value'])
+                                st.write('Standard Questions and Answers:')
                                 response_answers = response.json()['value'].replace("'", '"')
                                 for i,(j,k) in enumerate(json.loads(response_answers).items()):
                                     st.write(f'# Q{i+1}: {j}')
@@ -222,12 +231,20 @@ def main():
                                     temperature=0.7,
                                 )
 
+                                total_tokens = answer['usage']['total_tokens']
+
                                 # Print the answer
                                 st.write("### Answer")
                                 st.write(answer.choices[0].text.strip())
+                                st.write(f'Tokens Used: {total_tokens}')
 
                                 # AWS CloudWatch Logging
-                                write_logs(f'GPT Answer: {answer.choices[0].text.strip()}')
+                                # write_logs(f'GPT Answer: {answer.choices[0].text.strip()}')
+                                log_custom_q = {'Custom_Question': custom_question,
+                                            'Answer': answer.choices[0].text.strip(),
+                                            'Tokens': total_tokens
+                                            }
+                                write_logs(str(log_custom_q))
 
                         else:
                             st.error(f'Airflow DAG failed!')
