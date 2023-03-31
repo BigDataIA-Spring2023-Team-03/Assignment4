@@ -10,7 +10,7 @@ import openai
 from Logging.aws_logging import write_logs
 
 # DEV or PROD
-environment = 'DEV'
+environment = 'PROD'
 if environment == 'DEV':
     webserver = 'localhost:8080'
 elif environment == 'PROD':
