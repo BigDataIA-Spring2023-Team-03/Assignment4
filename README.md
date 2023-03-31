@@ -12,9 +12,9 @@ answer standard questions, user's custom questions based on the text. It uses St
 Used Python Streamlit for the frontend of our application. The Streamlit application connects to Airflow via Airflow APIs. These APIs are used to trigger DAGs and pass through user input into the DAGs. The APIs are also used to get event logs from airflow and see the status of DAG runs.
 
 ### Page Layout:
->  **Main** - Adhoc Process, where a user can either select a local file to upload or a file from S3. <br>
->  **Batch Process** - Batch Process, where a user runs all files in the Batch folder through the process. <br>
->  **Analytics Dashboard** - This dashboard records different usage statistics for the app.
+- **Main** - Adhoc Process, where a user can either select a local file to upload or a file from S3. <br>
+- **Batch Process** - Batch Process, where a user runs all files in the Batch folder through the process. <br>
+- **Analytics Dashboard** - This dashboard records different usage statistics for the app.
      Access is granted via a password known by the admins
 
 ## Airflow - airflow/ in the root path
