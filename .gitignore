@@ -9,3 +9,4 @@ openai_venv
 JV
 Notes.txt
 jv_scrap.py
+/airflow/logs/
