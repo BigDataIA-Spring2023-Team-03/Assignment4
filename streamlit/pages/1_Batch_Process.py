@@ -65,7 +65,7 @@ if password != '':
         s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw')
         s3_files = [obj["Key"] for obj in s3_objects.get("Contents", [])]
         # Get Necessary file
-        s3_files = [file.split('/')[1] for file in s3_files if file[-1] != '/' and file.split('.')[1] in ('wav')]
+        s3_files = [file.split('/')[1] for file in s3_files if file[-1] != '/' and file.split('.')[1] in ('wav', 'mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'webm')]
 
         st.write(f'Total Files: {len(s3_files)}')
         st.write(f'File List:')

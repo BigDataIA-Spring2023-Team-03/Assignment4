@@ -62,6 +62,7 @@ def check_dag_status(dag_id):
 def main():
     # Set the title of the app
     st.title("MP3 Uploader and Transcription")
+    st.write('File must be in one of these formats: mp3, mp4, mpeg, mpga, m4a, wav, or webm.')
 
     # Create a file uploader
     uploaded_file = st.file_uploader("Upload an MP3 file")
@@ -69,6 +70,9 @@ def main():
     # Create a dropdown to select an existing file from the S3 bucket
     s3_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix='raw/')
     s3_files = [obj["Key"] for obj in s3_objects.get("Contents", []) if not obj['Key'] == 'raw/']
+    # Get Necessary file
+    s3_files = [file.split('/')[1] for file in s3_files if file[-1] != '/' and file.split('.')[1] in ('wav', 'mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'webm')]
+
     selected_file = st.selectbox("Select an existing file from S3", ["None"] + s3_files)
 
     # Check if both an uploaded file and an S3 file were selected
@@ -77,6 +81,13 @@ def main():
     else:
         # Check if an uploaded file was selected
         if uploaded_file is not None:
+            # Get Necessary file
+            # TESTING
+            # st.write(uploaded_file)
+            if uploaded_file.name.split('.')[1] not in ('wav', 'mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'webm'):
+                st.error(f'Incorrect File Format!')
+                st.stop()
+
             # Get the file name and size
             filename = uploaded_file.name
             filesize = uploaded_file.size
