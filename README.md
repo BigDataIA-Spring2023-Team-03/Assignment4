@@ -1,4 +1,8 @@
 # Live Application Link
+http://52.202.105.109:8501
+
+# Airflow Link
+http://52.202.105.109:8080
 
 # CodeLab Documentation
 https://codelabs-preview.appspot.com/?file_id=1HVNaWkd4QOnp5tfxkyWu0S9DaV6LLmSpahldr8xvbUo
