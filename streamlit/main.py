@@ -132,9 +132,8 @@ def main():
                         if response.status_code == 409:
                             st.error(f'{filename} already transferred to S3!')
 
-                        st.write(f"Dag_run_id: {response.json()}")
-
                         dag_run_id = response.json()['dag_run_id']
+                        st.write(f"Dag_run_id: {dag_run_id}")
                         
                         # response_transcript = convert_mp3_to_text_function(filename)
                         # st.write("Transcript:", response_transcript)
@@ -162,9 +161,11 @@ def main():
                             url = f"http://{webserver}/api/v1/dags/{data['dag_id']}/dagRuns/{data['dag_run_id']}/taskInstances/{data['task_id']}/xcomEntries/{data['xcom_key']}"
 
                             response = requests.get(url=url, auth=('airflow2', 'airflow2'))
-                            st.write(response.json())
+                            # st.write(response.json())
 
                             response_transcript = response.json()['value']
+                            st.write('Transcript:')
+                            st.write(response_transcript)
                             st.session_state.transcript = response_transcript
                             st.session_state.transcription_generated = True
 
@@ -180,6 +181,7 @@ def main():
                             response = requests.get(url = url, auth=('airflow2','airflow2'))
 
                             response_answers = response.json()['value'].replace("'", '"')
+                            st.write('Standard Questions and Answers:')
                             for i,(j,k) in enumerate(json.loads(response_answers).items()):
                                 st.write(f'# Q{i+1}: {j}')
                                 st.write(f'## A: {k}')
@@ -189,7 +191,7 @@ def main():
                         custom_question = st.text_input("What would you like to ask?")
                         if custom_question != "":
                             # AWS CloudWatch Logging
-                            write_logs(f'Custom Question: {custom_question}')
+                            # write_logs(f'Custom Question: {custom_question}')
 
                             # Generate the answer using OpenAI's GPT-3
                             answer = openai.Completion.create(
@@ -201,12 +203,20 @@ def main():
                                 temperature=0.7,
                             )
 
+                            total_tokens = answer['usage']['total_tokens']
+
                             # Print the answer
                             st.write("### Answer")
                             st.write(answer.choices[0].text.strip())
+                            st.write(f'Tokens Used: {total_tokens}')
 
                             # AWS CloudWatch Logging
-                            write_logs(f'GPT Answer: {answer.choices[0].text.strip()}')
+                            # write_logs(f'GPT Answer: {answer.choices[0].text.strip()}')
+                            log_custom_q = {'Custom_Question': custom_question,
+                                            'Answer': answer.choices[0].text.strip(),
+                                            'Tokens': total_tokens
+                                            }
+                            write_logs(str(log_custom_q))
 
                     else:
                         st.error(f'Airflow DAG failed!')
