@@ -5464,3 +5464,51 @@ Please take a look at these docs to improve your DAG import time:
 [2023-03-31T14:24:45.893+0000] {logging_mixin.py:137} INFO - [2023-03-31T14:24:45.892+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2023-03-31T14:24:45.943+0000] {logging_mixin.py:137} INFO - [2023-03-31T14:24:45.942+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
 [2023-03-31T14:24:45.989+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 1.257 seconds
+[2023-03-31T18:55:08.164+0000] {processor.py:153} INFO - Started process (PID=11456) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:55:08.172+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:55:08.176+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:08.175+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:55:10.944+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:55:11.012+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:55:11.097+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:11.096+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:55:11.169+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:11.168+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:55:11.231+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 3.085 seconds
+[2023-03-31T18:55:42.180+0000] {processor.py:153} INFO - Started process (PID=11484) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:55:42.184+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:55:42.186+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:42.185+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:55:43.292+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:55:43.307+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:55:43.324+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:43.323+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:55:43.346+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:55:43.346+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:55:43.380+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 1.213 seconds
+[2023-03-31T18:56:13.650+0000] {processor.py:153} INFO - Started process (PID=11524) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:56:13.653+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:56:13.654+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:13.654+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:56:14.623+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:56:14.636+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:56:14.658+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:14.658+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:56:14.678+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:14.678+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:56:14.691+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 1.057 seconds
+[2023-03-31T18:56:45.224+0000] {processor.py:153} INFO - Started process (PID=11564) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:56:45.227+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:56:45.234+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:45.232+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:56:48.367+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:56:48.395+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:56:48.444+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:48.444+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:56:48.485+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:56:48.485+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:56:48.522+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 3.317 seconds
+[2023-03-31T18:57:18.918+0000] {processor.py:153} INFO - Started process (PID=11592) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:57:18.921+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:57:18.923+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:18.923+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:57:20.025+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:57:20.047+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:57:20.063+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:20.063+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:57:20.079+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:20.079+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:57:20.094+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 1.184 seconds
+[2023-03-31T18:57:50.284+0000] {processor.py:153} INFO - Started process (PID=11632) to work on /opt/airflow/dags/batch.py
+[2023-03-31T18:57:50.288+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/batch.py for tasks to queue
+[2023-03-31T18:57:50.290+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:50.290+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/batch.py
+[2023-03-31T18:57:52.098+0000] {logging_mixin.py:137} INFO - ['raw/JV_AUDIO_EXAMPLE.wav', 'raw/audio1.wav']
+[2023-03-31T18:57:52.123+0000] {processor.py:753} INFO - DAG(s) dict_keys(['audio_transcription_batch']) retrieved from /opt/airflow/dags/batch.py
+[2023-03-31T18:57:52.161+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:52.160+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-03-31T18:57:52.210+0000] {logging_mixin.py:137} INFO - [2023-03-31T18:57:52.209+0000] {dag.py:3441} INFO - Setting next_dagrun for audio_transcription_batch to 2023-03-31T00:00:00+00:00, run_after=2023-04-01T00:00:00+00:00
+[2023-03-31T18:57:52.243+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/batch.py took 1.974 seconds
