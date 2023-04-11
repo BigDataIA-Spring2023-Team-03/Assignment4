@@ -156,14 +156,6 @@ This will start the airflow in the port 8080
 WE ATTEST THAT WE HAVEN’T USED ANY OTHER STUDENTS’ WORK IN OUR ASSIGNMENT
 AND ABIDE BY THE POLICIES LISTED IN THE STUDENT HANDBOOK. <br>
 
-Contribution:
-- Raj Mehta: 25%
-- Mani Deepak Reddy Aila: 25%
-- Jared Videlefsky: 30%
-- Rumi Jha: 20%
-
-
-
 
 
 
